@@ -1,0 +1,1643 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Compass: Market Breadth and Sector Rotation Report - August 7, 2026</title>
+  <meta name="description" content="Daily market breadth and sector rotation report for active investors: market regime, industry leadership, risk warnings, and technical screen matches.">
+  <style>
+    body {
+      color: #1f2933;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 1180px;
+      padding: 32px 20px;
+    }
+    :root { --sticky-title-height: 58px; }
+    h1, h2, h3 { color: #111827; line-height: 1.2; }
+    h2, h3 { scroll-margin-top: 150px; }
+    h1 {
+      background: #ffffff;
+      border-bottom: 1px solid #d9e2ec;
+      margin: 0;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 11;
+    }
+    nav {
+      background: #f3f6f9;
+      border: 1px solid #d9e2ec;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 2;
+      margin: 14px 0 28px;
+      padding: 10px 14px;
+      position: sticky;
+      top: var(--sticky-title-height);
+      z-index: 10;
+    }
+    nav strong { color: #111827; }
+    table {
+      border-collapse: collapse;
+      margin: 16px 0 28px;
+      table-layout: auto;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #d9e2ec;
+      font-size: 13px;
+      padding: 6px 8px;
+      text-align: left;
+      overflow-wrap: anywhere;
+      vertical-align: top;
+      white-space: normal;
+    }
+    th:nth-child(n+4), td:nth-child(n+4) {
+      text-align: right;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child {
+      overflow-wrap: normal;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+    th { background: #f3f6f9; font-weight: 600; }
+    tr:nth-child(even) td { background: #fafbfc; }
+    .positive { color: #047857; font-weight: 600; }
+    .negative { color: #b91c1c; font-weight: 600; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .warning-callout {
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      border-left: 4px solid #ea580c;
+      border-radius: 6px;
+      margin: 14px 0 28px;
+      padding: 10px 16px;
+    }
+    .warning-callout ul { margin-bottom: 0; }
+    code {
+      background: #f3f6f9;
+      border-radius: 4px;
+      padding: 2px 4px;
+    }
+    a { color: #1d4ed8; }
+    @media print {
+      body {
+        max-width: none;
+        padding: 12px;
+      }
+      th, td {
+        font-size: 10px;
+        padding: 4px 5px;
+      }
+    }
+    @media (max-width: 760px) {
+      h1, nav {
+        position: static;
+      }
+      h2, h3 {
+        scroll-margin-top: 24px;
+      }
+    }
+    .leading-keywords {
+      background: #f8fafc;
+      border-left: 3px solid #3b82f6;
+      border-radius: 4px;
+      font-size: 0.85em;
+      line-height: 1.9;
+      margin: -8px 0 16px;
+      padding: 8px 12px;
+    }
+    .open-panel-btn {
+      background: #1d4ed8;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 600;
+      margin: 6px 0 12px;
+      padding: 6px 14px;
+    }
+    .open-panel-btn:hover { background: #1e40af; }
+    .side-panel-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+      z-index: 99;
+    }
+    .side-panel-overlay.open { display: block; }
+    .side-panel {
+      background: #fff;
+      box-shadow: -4px 0 28px rgba(0,0,0,0.18);
+      box-sizing: border-box;
+      height: 100vh;
+      max-width: 92vw;
+      overflow-y: auto;
+      padding: 0 24px 32px;
+      position: fixed;
+      right: -520px;
+      top: 0;
+      transition: right 0.25s ease;
+      width: 500px;
+      z-index: 100;
+    }
+    .side-panel.open { right: 0; }
+    .side-panel-header {
+      align-items: center;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -24px 16px;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .side-panel-header h3 { font-size: 1em; margin: 0; color: #111827; }
+    .side-panel-close {
+      background: #f3f4f6;
+      border: none;
+      border-radius: 6px;
+      color: #374151;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 600;
+      padding: 5px 12px;
+      white-space: nowrap;
+    }
+    .side-panel-close:hover { background: #e5e7eb; }
+    .side-panel h4 { color: #1d4ed8; font-size: 0.95em; margin: 20px 0 4px; }
+    .side-panel p { color: #374151; font-size: 0.875em; margin: 5px 0; }
+    .side-panel hr { border: none; border-top: 1px solid #e5e7eb; margin: 16px 0; }
+  </style>
+</head>
+<body>
+<h1 id="market-compass-august-7-2026">Market Compass — August 7, 2026</h1>
+<nav><strong>Today's Snapshot:</strong> <a href="#todays-read">Today's Read</a> &nbsp;·&nbsp; <a href="#market-regime">Market Regime</a> &nbsp;·&nbsp; <a href="#risk-warnings">Risk Warnings</a> &nbsp;·&nbsp; <a href="#what-changed-since-prior-report">What Changed</a><br><strong>Sectors &amp; Setups:</strong> <a href="#research-review-checklist">Action Checklist</a> &nbsp;·&nbsp; <a href="#top-industry-moves">Industry Moves</a> &nbsp;·&nbsp; <a href="#leading-industries">Leading Industries</a> &nbsp;·&nbsp; <a href="#long-term-research-candidates">Research Candidates</a> &nbsp;·&nbsp; <a href="#technical-screen-matches">Technical Screens</a></nav>
+
+<p><em>A daily market breadth and sector rotation report for active investors</em></p>
+<div style="margin:16px 0 24px;padding:14px 18px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;">
+<strong>Get this market breadth and sector rotation report every trading day.</strong><br>
+<a href="https://breadth-and-rotation.beehiiv.com/subscribe">Subscribe free</a> to receive market regime, industry leadership, risk warnings, and technical screens in your inbox.
+<div style="margin-top:8px;font-size:0.9em;color:#4b5563;">Know someone who tracks market breadth or sector rotation? Forward this report to them.</div>
+</div>
+
+<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin:12px 0;font-size:12px;color:#664d03;"><strong>Disclaimer:</strong> This report is generated from automated technical screens and is for informational and research purposes only. It is not investment advice, a solicitation, or a recommendation to buy or sell any security. Past performance is not indicative of future results. You are solely responsible for your own investment decisions. Consult a licensed financial advisor before acting on any information herein.</div>
+
+<div style="background:#eef6ff;border:1px solid #bfdbfe;border-radius:6px;padding:10px 14px;margin:12px 0;font-size:12px;color:#1e3a8a;"><strong>Data note:</strong> Data is as of the August 7, 2026 market close unless otherwise noted. Prices, signals, liquidity, and rankings may be stale and should be refreshed before any use. Version 1 uses local CSV outputs from the existing stock universe and technical screens; fundamentals, valuation, earnings dates, tax considerations, account constraints, and personal suitability are not evaluated. Trading and investing involve risk, including loss of principal. Technical screens can be wrong, delayed, incomplete, or unsuitable for your objectives, time horizon, account type, or risk tolerance. <strong>Published:</strong> 2026-08-07 17:00 ET.</div>
+
+<h2 id="todays-read">Today's Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regime</td>
+<td>Risk-On</td>
+</tr>
+<tr>
+<td>Risk posture</td>
+<td>Selective</td>
+</tr>
+<tr>
+<td>Universe</td>
+<td>1,334 stocks tracked · 54 new 52-week highs · 30 active swing setups</td>
+</tr>
+<tr>
+<td>Breadth</td>
+<td>62.4% of tracked stocks are above SMA50, new highs exceed new lows (54 vs 5)</td>
+</tr>
+<tr>
+<td>Leadership</td>
+<td>Diagnostics &amp; Research, Health Information Services, and Software - Application</td>
+</tr>
+<tr>
+<td>Weakest groups</td>
+<td>Chemicals, Utilities - Independent Power Producers, and Solar</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Use this report to prioritize research and chart review; validate entries, stops, liquidity, earnings, and risk before acting.</em></p>
+<h2 id="investor-read">Investor Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary read</td>
+<td>Risk-On regime with Selective risk posture.</td>
+</tr>
+<tr>
+<td>Research queue</td>
+<td>TWST, WGS, NEO, ADPT, NTRA</td>
+</tr>
+<tr>
+<td>Leadership focus</td>
+<td>Diagnostics &amp; Research, Health Information Services, and Software - Application</td>
+</tr>
+<tr>
+<td>Caution list</td>
+<td>Chemicals, Utilities - Independent Power Producers, and Solar</td>
+</tr>
+<tr>
+<td>Review prompt</td>
+<td>Check extension risk, chart location, fundamentals, valuation, and earnings before using any research row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="trader-read">Trader Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary read</td>
+<td>1 active risk warnings; use screen output as watchlist input only.</td>
+</tr>
+<tr>
+<td>Bullish screens</td>
+<td>VSXY, ROKU, ARCC, IOVA, NRIX</td>
+</tr>
+<tr>
+<td>Bearish screens</td>
+<td>TTD, OI</td>
+</tr>
+<tr>
+<td>Alerts / levels</td>
+<td>Automated trigger, stop, ATR, liquidity, reward/risk, and event-risk levels are pending future enrichment.</td>
+</tr>
+<tr>
+<td>Review prompt</td>
+<td>Open the linked chart, define trigger and invalidation, then check liquidity and event risk independently.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="market-regime">Market Regime</h2>
+<p>Risk Posture: <strong>Selective</strong> — screen backdrop supports selective research in leading industries</p>
+<p>Metric context: McClellan below -50 = elevated selling pressure; below -100 = washout territory. Range Expansion = share of stocks with daily range above their 20-day average. Signal Density = share of tracked names appearing in signal screens.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Breadth Date</th>
+<th>% &gt; SMA50</th>
+<th>% &gt; SMA200</th>
+<th>New Highs</th>
+<th>New Lows</th>
+<th>McClellan</th>
+<th>Median Range</th>
+<th>Avg Range</th>
+<th>Median ATR14</th>
+<th>Range Expansion</th>
+<th>Signal Density</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-08-07</td>
+<td>62.4%</td>
+<td>60.7%</td>
+<td>54</td>
+<td>5</td>
+<td>32.1</td>
+<td>3.3%</td>
+<td>4.1%</td>
+<td>4.1%</td>
+<td>35.1%</td>
+<td>6.9%</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="breadth_20260807.png" alt="Breadth Chart" style="max-width:1000px;width:100%;"></p>
+<h2 id="risk-warnings">Risk Warnings</h2>
+<div class="warning-callout">
+<ul>
+<li>Three-day downside patterns are elevated (54).</li>
+</ul>
+</div>
+
+<h2 id="screen-quality-warnings">Screen Quality Warnings</h2>
+<div class="warning-callout">
+<ul>
+<li>Missing ETF mapping for industry rows: Agricultural Inputs, Chemicals, Diagnostics & Research, Gambling, Grocery Stores.</li>
+<li>Missing market cap for research candidates: TWST, WGS, NEO, ADPT, NTRA, TXG, CERT, VEEV.</li>
+<li>Extreme historical returns may require split/data sanity review: TWST, NEO, ADPT, NTRA, TXG, U, RNG, VSXY.</li>
+</ul>
+</div>
+
+<h2 id="what-changed-since-prior-report">What Changed Since Prior Report</h2>
+<p>Prior comparison date: August 6, 2026</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Prior</th>
+<th>Current</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regime</td>
+<td>Selective Risk-On</td>
+<td>Risk-On</td>
+<td>changed</td>
+</tr>
+<tr>
+<td>Risk Posture</td>
+<td>Selective</td>
+<td>Selective</td>
+<td>unchanged</td>
+</tr>
+<tr>
+<td>% &gt; SMA50</td>
+<td>59.0%</td>
+<td>62.4%</td>
+<td class="positive">+3.3 pts</td>
+</tr>
+<tr>
+<td>% &gt; SMA200</td>
+<td>57.3%</td>
+<td>60.7%</td>
+<td class="positive">+3.4 pts</td>
+</tr>
+<tr>
+<td>New Highs</td>
+<td>34</td>
+<td>54</td>
+<td class="positive">+20</td>
+</tr>
+<tr>
+<td>New Lows</td>
+<td>15</td>
+<td>5</td>
+<td class="positive">+10</td>
+</tr>
+</tbody>
+</table></div>
+<p>Top-10 industries entering: Health Information Services, Medical Care Facilities, and Software - Infrastructure.
+Top-10 industries leaving: Banks - Diversified, Insurance Brokers, and Medical Instruments &amp; Supplies.
+New multi-signal long setups: APA, ARCC, CGAU, IHS, IOVA, PFE, RDW, ROKU.
+New multi-signal short setups: OI, TTD.</p>
+<h3 id="technical-screen-continuity">Technical Screen Continuity</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Tickers</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Added</td>
+<td>AMPL, APA, ARCC, CERT, CGAU, DHR, HTFL, IHS</td>
+<td>New technical screen matches vs prior report.</td>
+</tr>
+<tr>
+<td>Removed</td>
+<td>ALL, AON, BAM, BBY, BDX, BP, BXMT, CHYM</td>
+<td>No longer present in today's technical screen matches.</td>
+</tr>
+<tr>
+<td>Still Active</td>
+<td>A, BKNG, FSLY, GTM, HBM, NRIX, PBF, PSNL</td>
+<td>Appeared in both current and prior reports.</td>
+</tr>
+<tr>
+<td>Promoted</td>
+<td>none</td>
+<td>Model Screen Score improved by at least 15 points.</td>
+</tr>
+<tr>
+<td>Downgraded</td>
+<td>TJX</td>
+<td>Model Screen Score declined by at least 15 points.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="research-review-checklist">Research Review Checklist</h2>
+<ol>
+<li>Screen interpretation: conditions favor selective research in a Risk-On regime.</li>
+<li>Prioritize research review in leading groups: Diagnostics &amp; Research, Health Information Services, and Software - Application.</li>
+<li>Flag Chemicals (-7.0% 20D) and Utilities - Independent Power Producers (-6.7% 20D) for additional caution in independent research; these are the weakest-ranked groups today.</li>
+<li>Top-scored technical setups in today's screens (not recommendations): VSXY (Apparel Retail); ROKU (Entertainment). Independently verify chart, stop, liquidity, and event risk before acting.</li>
+<li>Review risk warnings before using any screen output in a trading or investing process.</li>
+</ol>
+<h2 id="top-industry-moves">Top Industry Moves</h2>
+<h3 id="top-rising-industries">Top Rising Industries</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Industry</th>
+<th>ETF</th>
+<th>Prior Rank</th>
+<th>Current Rank</th>
+<th>Days</th>
+<th>Rank Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rose</td>
+<td>Copper</td>
+<td>COPX</td>
+<td>84</td>
+<td>7</td>
+<td>28</td>
+<td class="positive">+77</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Apparel Retail</td>
+<td>XRT</td>
+<td>69</td>
+<td>4</td>
+<td>35</td>
+<td class="positive">+65</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Software - Application</td>
+<td>IGV</td>
+<td>65</td>
+<td>3</td>
+<td>42</td>
+<td class="positive">+62</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Industrial Distribution</td>
+<td>N/A</td>
+<td>74</td>
+<td>14</td>
+<td>28</td>
+<td class="positive">+60</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Steel</td>
+<td>SLX</td>
+<td>79</td>
+<td>21</td>
+<td>28</td>
+<td class="positive">+58</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="top-declining-industries">Top Declining Industries</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Industry</th>
+<th>ETF</th>
+<th>Prior Rank</th>
+<th>Current Rank</th>
+<th>Days</th>
+<th>Rank Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fell</td>
+<td>Healthcare Plans</td>
+<td>IHF</td>
+<td>1</td>
+<td>65</td>
+<td>35</td>
+<td class="negative">-64</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>Gambling</td>
+<td>N/A</td>
+<td>22</td>
+<td>84</td>
+<td>42</td>
+<td class="negative">-62</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>REIT - Retail</td>
+<td>N/A</td>
+<td>10</td>
+<td>71</td>
+<td>14</td>
+<td class="negative">-61</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>Integrated Freight &amp; Logistics</td>
+<td>N/A</td>
+<td>25</td>
+<td>78</td>
+<td>14</td>
+<td class="negative">-53</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>Semiconductors</td>
+<td>SOXX</td>
+<td>23</td>
+<td>74</td>
+<td>42</td>
+<td class="negative">-51</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="leading-industries">Leading Industries</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Rank</th>
+<th>ETF</th>
+<th>7d</th>
+<th>14d</th>
+<th>28d</th>
+<th>42d</th>
+<th>Chg 42d</th>
+<th>Size</th>
+<th>20D</th>
+<th>60D</th>
+<th>Composite</th>
+<th>Active Setups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>6</td>
+<td>14</td>
+<td>7</td>
+<td>3</td>
+<td class="positive">+2</td>
+<td>16</td>
+<td>9.5%</td>
+<td>54.3%</td>
+<td>0.953</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>34</td>
+<td>11</td>
+<td>8</td>
+<td>9</td>
+<td class="positive">+7</td>
+<td>12</td>
+<td>7.9%</td>
+<td>37.6%</td>
+<td>0.899</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Software - Application</td>
+<td>3</td>
+<td>IGV</td>
+<td>14</td>
+<td>26</td>
+<td>29</td>
+<td>65</td>
+<td class="positive">+62</td>
+<td>74</td>
+<td>12.7%</td>
+<td>23.9%</td>
+<td>0.878</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>XRT</td>
+<td>5</td>
+<td>45</td>
+<td>61</td>
+<td>51</td>
+<td class="positive">+47</td>
+<td>8</td>
+<td>12.4%</td>
+<td>27.3%</td>
+<td>0.862</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>5</td>
+<td>CRAK</td>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+<td>57</td>
+<td class="positive">+52</td>
+<td>7</td>
+<td>4.8%</td>
+<td>12.8%</td>
+<td>0.811</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Travel Services</td>
+<td>6</td>
+<td>N/A</td>
+<td>8</td>
+<td>30</td>
+<td>20</td>
+<td>14</td>
+<td class="positive">+8</td>
+<td>10</td>
+<td>6.5%</td>
+<td>20.1%</td>
+<td>0.810</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Copper</td>
+<td>7</td>
+<td>COPX</td>
+<td>46</td>
+<td>64</td>
+<td>84</td>
+<td>79</td>
+<td class="positive">+72</td>
+<td>6</td>
+<td>20.5%</td>
+<td>0.0%</td>
+<td>0.802</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Software - Infrastructure</td>
+<td>8</td>
+<td>IGV</td>
+<td>31</td>
+<td>20</td>
+<td>11</td>
+<td>24</td>
+<td class="positive">+16</td>
+<td>62</td>
+<td>6.7%</td>
+<td>21.6%</td>
+<td>0.796</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Insurance - Life</td>
+<td>9</td>
+<td>N/A</td>
+<td>2</td>
+<td>4</td>
+<td>15</td>
+<td>36</td>
+<td class="positive">+27</td>
+<td>7</td>
+<td>6.2%</td>
+<td>12.8%</td>
+<td>0.787</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Medical Care Facilities</td>
+<td>10</td>
+<td>IHF</td>
+<td>15</td>
+<td>7</td>
+<td>3</td>
+<td>7</td>
+<td class="negative">-3</td>
+<td>9</td>
+<td>3.6%</td>
+<td>23.7%</td>
+<td>0.779</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Rank columns (7d–42d) show the industry's rank that many trading days ago — lower is stronger. Chg 42d = rank change vs 42 trading days ago — positive means the industry moved up. 20D and 60D are the mean stock return within the industry over that period. Active Setups: count of today's swing-trade candidates from this industry appearing across all signal screens.</em></p>
+<h2 id="deteriorating-industries">Deteriorating Industries</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Rank</th>
+<th>ETF</th>
+<th>7d</th>
+<th>14d</th>
+<th>28d</th>
+<th>42d</th>
+<th>Chg 42d</th>
+<th>Size</th>
+<th>20D</th>
+<th>60D</th>
+<th>Composite</th>
+<th>Active Setups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Chemicals</td>
+<td>88</td>
+<td>N/A</td>
+<td>83</td>
+<td>77</td>
+<td>87</td>
+<td>85</td>
+<td class="negative">-3</td>
+<td>8</td>
+<td class="negative">-7.0%</td>
+<td class="negative">-28.8%</td>
+<td>0.078</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Utilities - Independent Power Producers</td>
+<td>87</td>
+<td>XLU</td>
+<td>80</td>
+<td>78</td>
+<td>54</td>
+<td>72</td>
+<td class="negative">-15</td>
+<td>5</td>
+<td class="negative">-6.7%</td>
+<td class="negative">-12.4%</td>
+<td>0.125</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Solar</td>
+<td>86</td>
+<td>TAN</td>
+<td>85</td>
+<td>85</td>
+<td>53</td>
+<td>67</td>
+<td class="negative">-19</td>
+<td>8</td>
+<td class="negative">-10.3%</td>
+<td class="negative">-11.5%</td>
+<td>0.144</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Utilities - Renewable</td>
+<td>85</td>
+<td>N/A</td>
+<td>81</td>
+<td>86</td>
+<td>83</td>
+<td>59</td>
+<td class="negative">-26</td>
+<td>7</td>
+<td class="negative">-3.6%</td>
+<td class="negative">-20.9%</td>
+<td>0.176</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Gambling</td>
+<td>84</td>
+<td>N/A</td>
+<td>74</td>
+<td>33</td>
+<td>39</td>
+<td>22</td>
+<td class="negative">-62</td>
+<td>5</td>
+<td class="negative">-12.1%</td>
+<td class="negative">-3.3%</td>
+<td>0.184</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Electrical Equipment &amp; Parts</td>
+<td>83</td>
+<td>XLI</td>
+<td>82</td>
+<td>81</td>
+<td>55</td>
+<td>42</td>
+<td class="negative">-41</td>
+<td>12</td>
+<td class="negative">-7.1%</td>
+<td class="negative">-18.5%</td>
+<td>0.188</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Grocery Stores</td>
+<td>82</td>
+<td>N/A</td>
+<td>79</td>
+<td>83</td>
+<td>66</td>
+<td>66</td>
+<td class="negative">-16</td>
+<td>5</td>
+<td class="negative">-4.5%</td>
+<td class="negative">-2.3%</td>
+<td>0.201</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Oil &amp; Gas Equipment &amp; Services</td>
+<td>81</td>
+<td>XES</td>
+<td>68</td>
+<td>75</td>
+<td>67</td>
+<td>63</td>
+<td class="negative">-18</td>
+<td>18</td>
+<td class="negative">-6.2%</td>
+<td class="negative">-15.9%</td>
+<td>0.211</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Utilities - Regulated Electric</td>
+<td>80</td>
+<td>XLU</td>
+<td>65</td>
+<td>40</td>
+<td>44</td>
+<td>43</td>
+<td class="negative">-37</td>
+<td>29</td>
+<td class="negative">-4.0%</td>
+<td class="negative">-2.3%</td>
+<td>0.216</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Agricultural Inputs</td>
+<td>79</td>
+<td>N/A</td>
+<td>57</td>
+<td>37</td>
+<td>52</td>
+<td>82</td>
+<td class="positive">+3</td>
+<td>5</td>
+<td class="negative">-2.0%</td>
+<td class="negative">-9.3%</td>
+<td>0.239</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Rank columns (7d–42d) show the industry's rank that many trading days ago — lower is stronger. Chg 42d = rank change vs 42 trading days ago — positive means the industry moved up. 20D and 60D are the mean stock return within the industry over that period. Active Setups: count of today's swing-trade candidates from this industry appearing across all signal screens.</em></p>
+<h2 id="long-term-research-candidates">Long-Term Research Candidates</h2>
+<p>These are research candidates from top-ranked stocks, capped at five names per industry to avoid over-concentration. Returns shown (60D, 120D, 250D) are historical — they reflect where prices have already moved, not forward expectations. Extension Risk flags names that may require extra patience or a better entry point. They are not buy signals.</p>
+<p><em>Chart: <strong>TV</strong> = TradingView chart (opens in browser); <strong>PDF</strong> = local chart file (if downloaded).</em></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Name</th>
+<th>Industry</th>
+<th>Industry Rank</th>
+<th>Market Cap</th>
+<th>60D Hist</th>
+<th>120D Hist</th>
+<th>250D Hist</th>
+<th>Extension Risk</th>
+<th>Research Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWST</td>
+<td>Twist Bioscience</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>106.7%</td>
+<td>135.5%</td>
+<td>351.1%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TWST">TV</a></td>
+</tr>
+<tr>
+<td>WGS</td>
+<td>GeneDx Holdings</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>95.2%</td>
+<td class="negative">-14.5%</td>
+<td class="negative">-26.7%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=WGS">TV</a></td>
+</tr>
+<tr>
+<td>NEO</td>
+<td>NeoGenomics</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>89.4%</td>
+<td>45.6%</td>
+<td>185.7%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=NEO">TV</a></td>
+</tr>
+<tr>
+<td>ADPT</td>
+<td>Adaptive Biotechnologies</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>82.9%</td>
+<td>55.4%</td>
+<td>104.3%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ADPT">TV</a></td>
+</tr>
+<tr>
+<td>NTRA</td>
+<td>Natera</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>57.7%</td>
+<td>56.2%</td>
+<td>112.0%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=NTRA">TV</a></td>
+</tr>
+<tr>
+<td>TXG</td>
+<td>10x Genomics</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>148.7%</td>
+<td>187.1%</td>
+<td>323.4%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TXG">TV</a></td>
+</tr>
+<tr>
+<td>CERT</td>
+<td>Certara</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>61.1%</td>
+<td>23.9%</td>
+<td class="negative">-25.0%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CERT">TV</a></td>
+</tr>
+<tr>
+<td>VEEV</td>
+<td>Veeva Systems</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>44.6%</td>
+<td>32.4%</td>
+<td class="negative">-18.3%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VEEV">TV</a></td>
+</tr>
+<tr>
+<td>GDRX</td>
+<td>GoodRx</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>36.8%</td>
+<td>68.8%</td>
+<td>6.1%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=GDRX">TV</a></td>
+</tr>
+<tr>
+<td>DOCS</td>
+<td>Doximity</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>3.6%</td>
+<td>9.5%</td>
+<td class="negative">-58.8%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=DOCS">TV</a></td>
+</tr>
+<tr>
+<td>TEAM</td>
+<td>Atlassian</td>
+<td>Software - Application</td>
+<td>3</td>
+<td>N/A</td>
+<td>75.4%</td>
+<td>76.7%</td>
+<td class="negative">-11.3%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TEAM">TV</a></td>
+</tr>
+<tr>
+<td>CHYM</td>
+<td>Chime Financial</td>
+<td>Software - Application</td>
+<td>3</td>
+<td>N/A</td>
+<td>60.8%</td>
+<td>47.8%</td>
+<td>0.7%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CHYM">TV</a></td>
+</tr>
+<tr>
+<td>U</td>
+<td>Unity Software</td>
+<td>Software - Application</td>
+<td>3</td>
+<td>N/A</td>
+<td>60.2%</td>
+<td>130.2%</td>
+<td>29.3%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=U">TV</a></td>
+</tr>
+<tr>
+<td>RNG</td>
+<td>RingCentral</td>
+<td>Software - Application</td>
+<td>3</td>
+<td>N/A</td>
+<td>50.5%</td>
+<td>108.7%</td>
+<td>119.2%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=RNG">TV</a></td>
+</tr>
+<tr>
+<td>GTM</td>
+<td>ZoomInfo</td>
+<td>Software - Application</td>
+<td>3</td>
+<td>N/A</td>
+<td>3.0%</td>
+<td class="negative">-34.3%</td>
+<td class="negative">-57.4%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=GTM">TV</a></td>
+</tr>
+<tr>
+<td>VSXY</td>
+<td>Victoria's Secret</td>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>N/A</td>
+<td>111.6%</td>
+<td>68.3%</td>
+<td>366.6%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VSXY">TV</a></td>
+</tr>
+<tr>
+<td>ANF</td>
+<td>Abercrombie &amp; Fitch</td>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>N/A</td>
+<td>54.1%</td>
+<td>20.2%</td>
+<td>9.2%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ANF">TV</a></td>
+</tr>
+<tr>
+<td>ROST</td>
+<td>Ross Stores</td>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>N/A</td>
+<td>17.3%</td>
+<td>29.9%</td>
+<td>75.8%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ROST">TV</a></td>
+</tr>
+<tr>
+<td>URBN</td>
+<td>Urban Outfitters</td>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>N/A</td>
+<td>14.8%</td>
+<td>9.6%</td>
+<td>0.7%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=URBN">TV</a></td>
+</tr>
+<tr>
+<td>LULU</td>
+<td>Lululemon Athletica</td>
+<td>Apparel Retail</td>
+<td>4</td>
+<td>N/A</td>
+<td>2.8%</td>
+<td class="negative">-27.1%</td>
+<td class="negative">-32.1%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=LULU">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="technical-screen-matches">Technical Screen Matches</h2>
+<p>These are technical screen matches from existing signal files. They are not trade recommendations. Trigger, stop, ATR, liquidity, reward/risk, and event risk still require separate validation until those inputs are available.</p>
+<p>Model Screen Score is weighted by signal count, industry rank, freshness, and setup type. It is not a probability of profit, expected return, or suitability rating. Industry cap: max 3 candidates per industry.</p>
+<p><em>Signal glossary: <strong>Momentum Pullback</strong> = stock in an uptrend that has pulled back 10–30% and shows re-entry conditions. <strong>MA Compression</strong> = short- and long-term moving averages converging, often preceding a directional move. <strong>Three-Day Up/Down</strong> = three consecutive closes in the same direction. <strong>New 52Wk High/Low</strong> = price reached a new annual extreme.</em></p>
+<p><em>Chart: <strong>TV</strong> = TradingView chart (opens in browser); <strong>PDF</strong> = local chart file (if downloaded).</em></p>
+<h3 id="bullish-technical-screen-matches">Bullish Technical Screen Matches</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Industry</th>
+<th>Setups</th>
+<th>Close</th>
+<th>Industry Rank</th>
+<th>Signal Count</th>
+<th>Model Screen Score</th>
+<th>Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VSXY</td>
+<td>Apparel Retail</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>98.54</td>
+<td>4</td>
+<td>2</td>
+<td>93</td>
+<td>Multi-signal; top industry breakout</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VSXY">TV</a></td>
+</tr>
+<tr>
+<td>ROKU</td>
+<td>Entertainment</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>153.11</td>
+<td>22</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ROKU">TV</a></td>
+</tr>
+<tr>
+<td>ARCC</td>
+<td>Asset Management</td>
+<td>MA Compression; Three-Day Up</td>
+<td>20.01</td>
+<td>25</td>
+<td>2</td>
+<td>72</td>
+<td>Multi-signal; compression setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ARCC">TV</a></td>
+</tr>
+<tr>
+<td>IOVA</td>
+<td>Biotechnology</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>6.34</td>
+<td>31</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=IOVA">TV</a></td>
+</tr>
+<tr>
+<td>NRIX</td>
+<td>Biotechnology</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>25.53</td>
+<td>31</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=NRIX">TV</a></td>
+</tr>
+<tr>
+<td>RVMD</td>
+<td>Biotechnology</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>205.15</td>
+<td>31</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=RVMD">TV</a></td>
+</tr>
+<tr>
+<td>CGAU</td>
+<td>Gold</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>21.24</td>
+<td>33</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CGAU">TV</a></td>
+</tr>
+<tr>
+<td>PFE</td>
+<td>Drug Manufacturers - General</td>
+<td>MA Compression; Three-Day Up</td>
+<td>26.76</td>
+<td>40</td>
+<td>2</td>
+<td>65</td>
+<td>Multi-signal; compression setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PFE">TV</a></td>
+</tr>
+<tr>
+<td>RDW</td>
+<td>Aerospace &amp; Defense</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>13.59</td>
+<td>42</td>
+<td>2</td>
+<td>65</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=RDW">TV</a></td>
+</tr>
+<tr>
+<td>APA</td>
+<td>Oil &amp; Gas E&amp;P</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>37.63</td>
+<td>53</td>
+<td>2</td>
+<td>65</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=APA">TV</a></td>
+</tr>
+<tr>
+<td>IHS</td>
+<td>Real Estate Services</td>
+<td>MA Compression; Three-Day Up</td>
+<td>8.35</td>
+<td>61</td>
+<td>2</td>
+<td>50</td>
+<td>Multi-signal; compression setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=IHS">TV</a></td>
+</tr>
+<tr>
+<td>PSNL</td>
+<td>Diagnostics &amp; Research</td>
+<td>Momentum Pullback</td>
+<td>14.16</td>
+<td>1</td>
+<td>1</td>
+<td>65</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PSNL">TV</a></td>
+</tr>
+<tr>
+<td>FSLY</td>
+<td>Software - Application</td>
+<td>Momentum Pullback</td>
+<td>22.96</td>
+<td>3</td>
+<td>1</td>
+<td>65</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=FSLY">TV</a></td>
+</tr>
+<tr>
+<td>PBF</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>Momentum Pullback</td>
+<td>61.71</td>
+<td>5</td>
+<td>1</td>
+<td>58</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PBF">TV</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Diagnostics &amp; Research</td>
+<td>Three-Day Up</td>
+<td>145.97</td>
+<td>1</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=A">TV</a></td>
+</tr>
+<tr>
+<td>DHR</td>
+<td>Diagnostics &amp; Research</td>
+<td>Three-Day Up</td>
+<td>204.76</td>
+<td>1</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=DHR">TV</a></td>
+</tr>
+<tr>
+<td>CERT</td>
+<td>Health Information Services</td>
+<td>Three-Day Up</td>
+<td>8.20</td>
+<td>2</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CERT">TV</a></td>
+</tr>
+<tr>
+<td>HTFL</td>
+<td>Health Information Services</td>
+<td>Three-Day Up</td>
+<td>28.82</td>
+<td>2</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=HTFL">TV</a></td>
+</tr>
+<tr>
+<td>SDGR</td>
+<td>Health Information Services</td>
+<td>Three-Day Up</td>
+<td>18.16</td>
+<td>2</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=SDGR">TV</a></td>
+</tr>
+<tr>
+<td>AMPL</td>
+<td>Software - Application</td>
+<td>Three-Day Up</td>
+<td>11.26</td>
+<td>3</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=AMPL">TV</a></td>
+</tr>
+<tr>
+<td>GTM</td>
+<td>Software - Application</td>
+<td>Three-Day Up</td>
+<td>4.18</td>
+<td>3</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=GTM">TV</a></td>
+</tr>
+<tr>
+<td>TJX</td>
+<td>Apparel Retail</td>
+<td>MA Compression</td>
+<td>161.36</td>
+<td>4</td>
+<td>1</td>
+<td>53</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TJX">TV</a></td>
+</tr>
+<tr>
+<td>TENB</td>
+<td>Software - Infrastructure</td>
+<td>Momentum Pullback</td>
+<td>36.38</td>
+<td>8</td>
+<td>1</td>
+<td>50</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TENB">TV</a></td>
+</tr>
+<tr>
+<td>XRAY</td>
+<td>Medical Instruments &amp; Supplies</td>
+<td>Momentum Pullback</td>
+<td>12.12</td>
+<td>13</td>
+<td>1</td>
+<td>50</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=XRAY">TV</a></td>
+</tr>
+<tr>
+<td>UMAC</td>
+<td>Computer Hardware</td>
+<td>Momentum Pullback</td>
+<td>26.11</td>
+<td>15</td>
+<td>1</td>
+<td>50</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=UMAC">TV</a></td>
+</tr>
+<tr>
+<td>BKNG</td>
+<td>Travel Services</td>
+<td>Three-Day Up</td>
+<td>214.42</td>
+<td>6</td>
+<td>1</td>
+<td>48</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=BKNG">TV</a></td>
+</tr>
+<tr>
+<td>HBM</td>
+<td>Copper</td>
+<td>Three-Day Up</td>
+<td>27.61</td>
+<td>7</td>
+<td>1</td>
+<td>48</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=HBM">TV</a></td>
+</tr>
+<tr>
+<td>LUV</td>
+<td>Airlines</td>
+<td>Momentum Pullback</td>
+<td>47.05</td>
+<td>18</td>
+<td>1</td>
+<td>42</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=LUV">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bearish-technical-screen-matches">Bearish Technical Screen Matches</h3>
+<p><em>Bearish setups — stocks making new lows or showing persistent downside patterns. Validate carefully before acting.</em></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Industry</th>
+<th>Setups</th>
+<th>Close</th>
+<th>Industry Rank</th>
+<th>Signal Count</th>
+<th>Model Screen Score</th>
+<th>Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TTD</td>
+<td>Advertising Agencies</td>
+<td>New 52Wk Low; Three-Day Down</td>
+<td>13.80</td>
+<td>24</td>
+<td>2</td>
+<td>47</td>
+<td>Multi-signal; new-low weakness</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TTD">TV</a></td>
+</tr>
+<tr>
+<td>OI</td>
+<td>Packaging &amp; Containers</td>
+<td>New 52Wk Low; Three-Day Down</td>
+<td>7.03</td>
+<td>27</td>
+<td>2</td>
+<td>40</td>
+<td>Multi-signal; new-low weakness</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=OI">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<details>
+<summary><strong>How To Use This Report / What This Report Is Not</strong></summary>
+
+<p><strong>How To Use This Report</strong></p>
+<div class="table-scroll"><table><thead><tr><th>Use</th><th>Purpose</th></tr></thead><tbody><tr><td>Market map</td><td>Start with breadth, regime, risk warnings, and what changed since the prior report.</td></tr><tr><td>Industry scan</td><td>Use leading, deteriorating, rising, and declining industries to focus research.</td></tr><tr><td>Research queue</td><td>Treat long-term candidates as names for deeper fundamental, valuation, and chart review.</td></tr><tr><td>Technical review</td><td>Treat bullish and bearish screen matches as watchlist inputs that require independent trigger, stop, liquidity, and event-risk checks.</td></tr><tr><td>Source follow-up</td><td>Use chart links and source files to verify raw inputs before relying on any row.</td></tr></tbody></table></div>
+
+<p><strong>What This Report Is Not</strong></p>
+<div class="table-scroll"><table><thead><tr><th>Not</th><th>Meaning</th></tr></thead><tbody><tr><td>Investment advice</td><td>The report does not evaluate personal objectives, risk tolerance, tax situation, account type, or suitability.</td></tr><tr><td>Buy/sell recommendation</td><td>Named tickers are research candidates or screen matches, not recommendations to transact.</td></tr><tr><td>Price target</td><td>The report does not provide fair value estimates, targets, or expected returns.</td></tr><tr><td>Trade plan</td><td>Trigger, stop, sizing, reward/risk, liquidity, and event-risk review remain separate user work.</td></tr><tr><td>Performance claim</td><td>Model Screen Score is not validated historical performance or a forecast of future results.</td></tr></tbody></table></div>
+
+</details>
+
+<h2 id="methodology-and-score-notes">Methodology And Score Notes</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version</td>
+<td>Daily Report Methodology v1</td>
+</tr>
+<tr>
+<td>Model Screen Score</td>
+<td>Screen-fit rank based on signal count, industry rank, freshness, and setup type.</td>
+</tr>
+<tr>
+<td>Not predictive proof</td>
+<td>The score is not expected return, probability of profit, historical validation, or suitability analysis.</td>
+</tr>
+<tr>
+<td>Industry ranks</td>
+<td>Composite industry ranks use existing daily ranking outputs and historical rank columns when available.</td>
+</tr>
+<tr>
+<td>Research candidates</td>
+<td>Long-term rows are research candidates from ranked stocks and leading industries, with historical returns labeled as historical only.</td>
+</tr>
+<tr>
+<td>Technical matches</td>
+<td>Bullish and bearish rows are screen matches requiring independent chart, trigger, stop, liquidity, and event-risk review.</td>
+</tr>
+</tbody>
+</table></div>
+<details>
+<summary><strong>Source Files</strong></summary>
+
+<div class="table-scroll"><table><thead><tr><th>Source</th><th>Status</th><th>Rows</th><th>Path</th></tr></thead><tbody><tr><td>Market breadth</td><td>present</td><td>1255</td><td>breadth_20260807.csv</td></tr><tr><td>Industry composite rankings</td><td>present</td><td>88</td><td>all_industry_composite_20260807.csv</td></tr><tr><td>Top ranked stocks</td><td>present</td><td>211</td><td>top_ranked_composite_20260807.csv</td></tr><tr><td>All ranked stocks</td><td>present</td><td>1334</td><td>all_stocks_composite_sorted_20260807.csv</td></tr><tr><td>Top momentum pullbacks</td><td>present</td><td>1482</td><td>top_momentum_pullbacks_20260807.csv</td></tr><tr><td>MA compression</td><td>present</td><td>1482</td><td>ma_compression_stocks_20260807.csv</td></tr><tr><td>Three-day up/down</td><td>present</td><td>127</td><td>three_day_up_down_stocks_20260807.csv</td></tr><tr><td>New 52-week members</td><td>present</td><td>59</td><td>breadth_new_52wk_members_20260807.csv</td></tr></tbody></table></div>
+
+</details>
+<div style="margin-top:48px;padding:20px 24px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;text-align:center;">
+  <strong style="color:#1e3a5f;">Get this market breadth and sector rotation report every trading day.</strong><br>
+  <span style="display:inline-block;margin-top:4px;color:#374151;font-size:14px;">Market regime, industry leadership, risk warnings, and technical screens delivered to your inbox.</span><br>
+  <a href="https://breadth-and-rotation.beehiiv.com/subscribe" style="display:inline-block;margin-top:8px;padding:8px 20px;background:#1d4ed8;color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:6px;">Subscribe free &rarr;</a>
+  <div style="margin-top:10px;color:#6b7280;font-size:12px;">Know someone who tracks market breadth or sector rotation? Forward this report to them.</div>
+</div>
+<hr style="margin-top:32px;border:none;border-top:1px solid #d9e2ec;">
+<p style="font-size:11px;color:#6b7280;margin:12px 0 24px;">This report is generated from automated technical screens and is for informational and research purposes only. It is not investment advice, a solicitation, or a recommendation to buy or sell any security. Past performance is not indicative of future results. You are solely responsible for your own investment decisions. Consult a licensed financial advisor before acting on any information herein.</p>
+<div id="panel-overlay" class="side-panel-overlay" onclick="closeAllPanels()"></div>
+<script>
+var _openId = null;
+function openPanel(id) {
+  if (_openId && _openId !== id) document.getElementById(_openId).classList.remove('open');
+  _openId = id;
+  document.getElementById(id).classList.add('open');
+  document.getElementById('panel-overlay').classList.add('open');
+}
+function closeAllPanels() {
+  if (_openId) document.getElementById(_openId).classList.remove('open');
+  _openId = null;
+  document.getElementById('panel-overlay').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllPanels(); });
+</script>
+</body>
+</html>
