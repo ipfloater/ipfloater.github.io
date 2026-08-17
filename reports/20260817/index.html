@@ -1,0 +1,1646 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Market Compass: Market Breadth and Sector Rotation Report - August 17, 2026</title>
+  <meta name="description" content="Daily market breadth and sector rotation report for active investors: market regime, industry leadership, risk warnings, and technical screen matches.">
+  <style>
+    body {
+      color: #1f2933;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.5;
+      margin: 0 auto;
+      max-width: 1180px;
+      padding: 32px 20px;
+    }
+    :root { --sticky-title-height: 58px; }
+    h1, h2, h3 { color: #111827; line-height: 1.2; }
+    h2, h3 { scroll-margin-top: 150px; }
+    h1 {
+      background: #ffffff;
+      border-bottom: 1px solid #d9e2ec;
+      margin: 0;
+      padding: 12px 0;
+      position: sticky;
+      top: 0;
+      z-index: 11;
+    }
+    nav {
+      background: #f3f6f9;
+      border: 1px solid #d9e2ec;
+      border-radius: 6px;
+      font-size: 13px;
+      line-height: 2;
+      margin: 14px 0 28px;
+      padding: 10px 14px;
+      position: sticky;
+      top: var(--sticky-title-height);
+      z-index: 10;
+    }
+    nav strong { color: #111827; }
+    table {
+      border-collapse: collapse;
+      margin: 16px 0 28px;
+      table-layout: auto;
+      width: 100%;
+    }
+    th, td {
+      border: 1px solid #d9e2ec;
+      font-size: 13px;
+      padding: 6px 8px;
+      text-align: left;
+      overflow-wrap: anywhere;
+      vertical-align: top;
+      white-space: normal;
+    }
+    th:nth-child(n+4), td:nth-child(n+4) {
+      text-align: right;
+      white-space: nowrap;
+    }
+    th:first-child, td:first-child {
+      overflow-wrap: normal;
+      white-space: nowrap;
+      word-break: keep-all;
+    }
+    th { background: #f3f6f9; font-weight: 600; }
+    tr:nth-child(even) td { background: #fafbfc; }
+    .positive { color: #047857; font-weight: 600; }
+    .negative { color: #b91c1c; font-weight: 600; }
+    .table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    .warning-callout {
+      background: #fff7ed;
+      border: 1px solid #fdba74;
+      border-left: 4px solid #ea580c;
+      border-radius: 6px;
+      margin: 14px 0 28px;
+      padding: 10px 16px;
+    }
+    .warning-callout ul { margin-bottom: 0; }
+    code {
+      background: #f3f6f9;
+      border-radius: 4px;
+      padding: 2px 4px;
+    }
+    a { color: #1d4ed8; }
+    @media print {
+      body {
+        max-width: none;
+        padding: 12px;
+      }
+      th, td {
+        font-size: 10px;
+        padding: 4px 5px;
+      }
+    }
+    @media (max-width: 760px) {
+      h1, nav {
+        position: static;
+      }
+      h2, h3 {
+        scroll-margin-top: 24px;
+      }
+    }
+    .leading-keywords {
+      background: #f8fafc;
+      border-left: 3px solid #3b82f6;
+      border-radius: 4px;
+      font-size: 0.85em;
+      line-height: 1.9;
+      margin: -8px 0 16px;
+      padding: 8px 12px;
+    }
+    .open-panel-btn {
+      background: #1d4ed8;
+      border: none;
+      border-radius: 6px;
+      color: #fff;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 600;
+      margin: 6px 0 12px;
+      padding: 6px 14px;
+    }
+    .open-panel-btn:hover { background: #1e40af; }
+    .side-panel-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.25);
+      z-index: 99;
+    }
+    .side-panel-overlay.open { display: block; }
+    .side-panel {
+      background: #fff;
+      box-shadow: -4px 0 28px rgba(0,0,0,0.18);
+      box-sizing: border-box;
+      height: 100vh;
+      max-width: 92vw;
+      overflow-y: auto;
+      padding: 0 24px 32px;
+      position: fixed;
+      right: -520px;
+      top: 0;
+      transition: right 0.25s ease;
+      width: 500px;
+      z-index: 100;
+    }
+    .side-panel.open { right: 0; }
+    .side-panel-header {
+      align-items: center;
+      background: #fff;
+      border-bottom: 1px solid #e5e7eb;
+      display: flex;
+      justify-content: space-between;
+      margin: 0 -24px 16px;
+      padding: 14px 20px;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+    }
+    .side-panel-header h3 { font-size: 1em; margin: 0; color: #111827; }
+    .side-panel-close {
+      background: #f3f4f6;
+      border: none;
+      border-radius: 6px;
+      color: #374151;
+      cursor: pointer;
+      font-size: 0.85em;
+      font-weight: 600;
+      padding: 5px 12px;
+      white-space: nowrap;
+    }
+    .side-panel-close:hover { background: #e5e7eb; }
+    .side-panel h4 { color: #1d4ed8; font-size: 0.95em; margin: 20px 0 4px; }
+    .side-panel p { color: #374151; font-size: 0.875em; margin: 5px 0; }
+    .side-panel hr { border: none; border-top: 1px solid #e5e7eb; margin: 16px 0; }
+  </style>
+</head>
+<body>
+<h1 id="market-compass-august-17-2026">Market Compass — August 17, 2026</h1>
+<nav><strong>Today's Snapshot:</strong> <a href="#todays-read">Today's Read</a> &nbsp;·&nbsp; <a href="#market-regime">Market Regime</a> &nbsp;·&nbsp; <a href="#risk-warnings">Risk Warnings</a> &nbsp;·&nbsp; <a href="#what-changed-since-prior-report">What Changed</a><br><strong>Sectors &amp; Setups:</strong> <a href="#research-review-checklist">Action Checklist</a> &nbsp;·&nbsp; <a href="#top-industry-moves">Industry Moves</a> &nbsp;·&nbsp; <a href="#leading-industries">Leading Industries</a> &nbsp;·&nbsp; <a href="#long-term-research-candidates">Research Candidates</a> &nbsp;·&nbsp; <a href="#technical-screen-matches">Technical Screens</a></nav>
+
+<p><em>A daily market breadth and sector rotation report for active investors</em></p>
+<div style="margin:16px 0 24px;padding:14px 18px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;">
+<strong>Get this market breadth and sector rotation report every trading day.</strong><br>
+<a href="https://breadth-and-rotation.beehiiv.com/subscribe">Subscribe free</a> to receive market regime, industry leadership, risk warnings, and technical screens in your inbox.
+<div style="margin-top:8px;font-size:0.9em;color:#4b5563;">Know someone who tracks market breadth or sector rotation? Forward this report to them.</div>
+</div>
+
+<div style="background:#fff3cd;border:1px solid #ffc107;border-radius:6px;padding:10px 14px;margin:12px 0;font-size:12px;color:#664d03;"><strong>Disclaimer:</strong> This report is generated from automated technical screens and is for informational and research purposes only. It is not investment advice, a solicitation, or a recommendation to buy or sell any security. Past performance is not indicative of future results. You are solely responsible for your own investment decisions. Consult a licensed financial advisor before acting on any information herein.</div>
+
+<div style="background:#eef6ff;border:1px solid #bfdbfe;border-radius:6px;padding:10px 14px;margin:12px 0;font-size:12px;color:#1e3a8a;"><strong>Data note:</strong> Data is as of the August 17, 2026 market close unless otherwise noted. Prices, signals, liquidity, and rankings may be stale and should be refreshed before any use. Version 1 uses local CSV outputs from the existing stock universe and technical screens; fundamentals, valuation, earnings dates, tax considerations, account constraints, and personal suitability are not evaluated. Trading and investing involve risk, including loss of principal. Technical screens can be wrong, delayed, incomplete, or unsuitable for your objectives, time horizon, account type, or risk tolerance. <strong>Published:</strong> 2026-08-17 17:07 ET.</div>
+
+<h2 id="todays-read">Today's Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regime</td>
+<td>Risk-On</td>
+</tr>
+<tr>
+<td>Risk posture</td>
+<td>Aggressive</td>
+</tr>
+<tr>
+<td>Universe</td>
+<td>1,332 stocks tracked · 38 new 52-week highs · 30 active swing setups</td>
+</tr>
+<tr>
+<td>Breadth</td>
+<td>60.6% of tracked stocks are above SMA50, new highs exceed new lows (38 vs 13)</td>
+</tr>
+<tr>
+<td>Leadership</td>
+<td>Diagnostics &amp; Research, Health Information Services, and Computer Hardware</td>
+</tr>
+<tr>
+<td>Weakest groups</td>
+<td>Solar, Footwear &amp; Accessories, and Chemicals</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Use this report to prioritize research and chart review; validate entries, stops, liquidity, earnings, and risk before acting.</em></p>
+<h2 id="investor-read">Investor Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary read</td>
+<td>Risk-On regime with Aggressive risk posture.</td>
+</tr>
+<tr>
+<td>Research queue</td>
+<td>TWST, WGS, NTRA, IQV, A</td>
+</tr>
+<tr>
+<td>Leadership focus</td>
+<td>Diagnostics &amp; Research, Health Information Services, and Computer Hardware</td>
+</tr>
+<tr>
+<td>Caution list</td>
+<td>Solar, Footwear &amp; Accessories, and Chemicals</td>
+</tr>
+<tr>
+<td>Review prompt</td>
+<td>Check extension risk, chart location, fundamentals, valuation, and earnings before using any research row.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="trader-read">Trader Read</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Primary read</td>
+<td>0 active risk warnings; use screen output as watchlist input only.</td>
+</tr>
+<tr>
+<td>Bullish screens</td>
+<td>SLS, IVZ, CVE, EQNR, ABUS</td>
+</tr>
+<tr>
+<td>Bearish screens</td>
+<td>STNE</td>
+</tr>
+<tr>
+<td>Alerts / levels</td>
+<td>Automated trigger, stop, ATR, liquidity, reward/risk, and event-risk levels are pending future enrichment.</td>
+</tr>
+<tr>
+<td>Review prompt</td>
+<td>Open the linked chart, define trigger and invalidation, then check liquidity and event risk independently.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="market-regime">Market Regime</h2>
+<p>Risk Posture: <strong>Aggressive</strong> — screen backdrop shows broad participation; still validate each setup independently</p>
+<p>Metric context: McClellan below -50 = elevated selling pressure; below -100 = washout territory. Range Expansion = share of stocks with daily range above their 20-day average. Signal Density = share of tracked names appearing in signal screens.</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Breadth Date</th>
+<th>% &gt; SMA50</th>
+<th>% &gt; SMA200</th>
+<th>New Highs</th>
+<th>New Lows</th>
+<th>McClellan</th>
+<th>Median Range</th>
+<th>Avg Range</th>
+<th>Median ATR14</th>
+<th>Range Expansion</th>
+<th>Signal Density</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>2026-08-17</td>
+<td>60.6%</td>
+<td>62.1%</td>
+<td>38</td>
+<td>13</td>
+<td>0.7</td>
+<td>2.9%</td>
+<td>3.3%</td>
+<td>3.9%</td>
+<td>22.3%</td>
+<td>2.9%</td>
+</tr>
+</tbody>
+</table></div>
+<p><img src="breadth_20260817.png" alt="Breadth Chart" style="max-width:1000px;width:100%;"></p>
+<h2 id="risk-warnings">Risk Warnings</h2>
+<div class="warning-callout">
+<ul>
+<li>No major report-level warnings from available inputs.</li>
+</ul>
+</div>
+
+<h2 id="screen-quality-warnings">Screen Quality Warnings</h2>
+<div class="warning-callout">
+<ul>
+<li>Missing ETF mapping for industry rows: Agricultural Inputs, Auto Manufacturers, Banks - Diversified, Chemicals, Diagnostics & Research.</li>
+<li>Missing market cap for research candidates: TWST, WGS, NTRA, IQV, A, TXG, HTFL, GDRX.</li>
+<li>Extreme historical returns may require split/data sanity review: TWST, TXG, UMAC, P, VELO, PBF, MPC, VLO, DINO, PSX.</li>
+</ul>
+</div>
+
+<h2 id="what-changed-since-prior-report">What Changed Since Prior Report</h2>
+<p>Prior comparison date: August 14, 2026</p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Metric</th>
+<th>Prior</th>
+<th>Current</th>
+<th>Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Regime</td>
+<td>Risk-On</td>
+<td>Risk-On</td>
+<td>unchanged</td>
+</tr>
+<tr>
+<td>Risk Posture</td>
+<td>Aggressive</td>
+<td>Aggressive</td>
+<td>unchanged</td>
+</tr>
+<tr>
+<td>% &gt; SMA50</td>
+<td>65.1%</td>
+<td>60.6%</td>
+<td class="negative">-4.5 pts</td>
+</tr>
+<tr>
+<td>% &gt; SMA200</td>
+<td>64.0%</td>
+<td>62.1%</td>
+<td class="negative">-1.9 pts</td>
+</tr>
+<tr>
+<td>New Highs</td>
+<td>53</td>
+<td>38</td>
+<td class="negative">-15</td>
+</tr>
+<tr>
+<td>New Lows</td>
+<td>4</td>
+<td>13</td>
+<td class="negative">-9</td>
+</tr>
+</tbody>
+</table></div>
+<p>Top-10 industries entering: Biotechnology.
+Top-10 industries leaving: Software - Infrastructure.
+New multi-signal long setups: ABUS, BTE, CGAU, CVE, DAR, EQNR, MU, OVV, OXY, ROKU.
+New multi-signal short setups: none.</p>
+<h3 id="technical-screen-continuity">Technical Screen Continuity</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Status</th>
+<th>Tickers</th>
+<th>Read</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Added</td>
+<td>ABSI, ABUS, AKAM, BTE, BXSL, CGAU, CRSR, CVE</td>
+<td>New technical screen matches vs prior report.</td>
+</tr>
+<tr>
+<td>Removed</td>
+<td>ABCL, AMT, ARMK, AVAH, BBIO, BNS, CMBT, EBC</td>
+<td>No longer present in today's technical screen matches.</td>
+</tr>
+<tr>
+<td>Still Active</td>
+<td>APPS, COHU, FSLY, GRND, IVZ, MRK, PSNL</td>
+<td>Appeared in both current and prior reports.</td>
+</tr>
+<tr>
+<td>Promoted</td>
+<td>none</td>
+<td>Model Screen Score improved by at least 15 points.</td>
+</tr>
+<tr>
+<td>Downgraded</td>
+<td>none</td>
+<td>Model Screen Score declined by at least 15 points.</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="research-review-checklist">Research Review Checklist</h2>
+<ol>
+<li>Screen interpretation: participation appears constructive in a Risk-On regime.</li>
+<li>Prioritize research review in leading groups: Diagnostics &amp; Research, Health Information Services, and Computer Hardware.</li>
+<li>Flag Solar (-10.5% 20D) and Footwear &amp; Accessories (-11.8% 20D) for additional caution in independent research; these are the weakest-ranked groups today.</li>
+<li>Top-scored technical setups in today's screens (not recommendations): SLS (Biotechnology); IVZ (Asset Management). Independently verify chart, stop, liquidity, and event risk before acting.</li>
+</ol>
+<h2 id="top-industry-moves">Top Industry Moves</h2>
+<h3 id="top-rising-industries">Top Rising Industries</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Industry</th>
+<th>ETF</th>
+<th>Prior Rank</th>
+<th>Current Rank</th>
+<th>Days</th>
+<th>Rank Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rose</td>
+<td>Copper</td>
+<td>COPX</td>
+<td>85</td>
+<td>12</td>
+<td>42</td>
+<td class="positive">+73</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Gold</td>
+<td>GDX</td>
+<td>87</td>
+<td>18</td>
+<td>42</td>
+<td class="positive">+69</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Oil &amp; Gas Integrated</td>
+<td>XLE</td>
+<td>82</td>
+<td>14</td>
+<td>42</td>
+<td class="positive">+68</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Oil &amp; Gas E&amp;P</td>
+<td>XOP</td>
+<td>84</td>
+<td>21</td>
+<td>42</td>
+<td class="positive">+63</td>
+</tr>
+<tr>
+<td>Rose</td>
+<td>Steel</td>
+<td>SLX</td>
+<td>80</td>
+<td>20</td>
+<td>42</td>
+<td class="positive">+60</td>
+</tr>
+</tbody>
+</table></div>
+<p><button class="open-panel-btn" onclick="openPanel('panel-rising')">Why are these industries rising? &#8594;</button><div id="panel-rising" class="side-panel"><div class="side-panel-header"><h3>Why are these industries rising?</h3><button class="side-panel-close" onclick="closeAllPanels()">&#x2715; Close panel</button></div><h4>Copper</h4><p><strong>Bull:</strong> Copper is experiencing rising relative strength primarily due to its critical role in the electrification and AI boom, as highlighted by the headlines discussing COPX as a key player in the &quot;electrification squeeze&quot; and the &quot;pick-and-shovel AI trade.&quot; With increasing demand for electric vehicles, renewable energy infrastructure, and advanced technologies, copper&#x27;s essential properties make it indispensable, thus driving investor interest and pushing prices higher. Additionally, the recent outperformance of copper ETFs, as noted in the headlines, suggests that Wall Street is beginning to recognize copper&#x27;s potential as a valuable asset, further fueling its upward momentum.</p><p><strong>Bear:</strong> While the bullish case for copper hinges on its role in electrification and AI, it overlooks significant headwinds such as potential oversupply and geopolitical risks in major copper-producing regions. Additionally, the recent rally in copper prices may be more a result of speculative trading rather than sustained demand, as evidenced by the volatility in related stocks and ETFs. Investors should be cautious, as a correction could occur if economic growth falters or if alternative materials gain traction in the technologies driving current demand.</p><p><strong>Verdict:</strong> Copper&#x27;s rising prices are fundamentally driven by its critical role in the electrification of transportation and renewable energy, alongside growing investor interest in copper-related ETFs as a response to increasing demand from electric vehicles and AI technologies. However, investors should remain cautious of potential oversupply and geopolitical risks that could trigger a price correction, particularly if economic growth slows or alternative materials gain market share.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>Gold</h4><p><strong>Bull:</strong> Gold is experiencing a rise in relative strength primarily due to increasing investor confidence and demand, as evidenced by headlines indicating that gold prices have surged to $4,400, prompting miners to catch up. Additionally, the bullish sentiment surrounding gold stocks, highlighted by significant gains in companies like Newmont, suggests that investors are reallocating their portfolios towards gold amid economic uncertainty, further solidifying gold&#x27;s position as a safe-haven asset. The mention of a sector rotation in Barrick&#x27;s stock valuation also points to a broader trend where investors are favoring gold over other sectors, reinforcing its rising strength in the market.</p><p><strong>Bear:</strong> While the recent surge in gold prices and the performance of miners like Newmont may seem promising, this bullish sentiment could be misleading. The gold market is heavily influenced by macroeconomic factors such as rising interest rates and inflationary pressures, which could erode gold&#x27;s appeal as a safe-haven asset. Additionally, the mention of losses in companies like Lingbao Gold suggests that not all miners are benefiting equally, indicating potential volatility and risks within the sector that could undermine the overall bullish narrative.</p><p><strong>Verdict:</strong> The recent rise in gold prices can be attributed to increasing investor confidence driven by economic uncertainty, leading to a shift towards gold as a safe-haven asset. However, key risks remain, particularly from rising interest rates and inflationary pressures, which could diminish gold&#x27;s attractiveness and introduce volatility within the sector. Investors should closely monitor macroeconomic indicators and the performance of individual mining companies to navigate potential risks while capitalizing on the current bullish sentiment.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>Oil &amp; Gas Integrated</h4><p><strong>Bull:</strong> The Oil &amp; Gas Integrated sector is experiencing rising relative strength primarily due to increasing fair value estimates for major oil stocks, driven by higher oil prices, as highlighted in the Morningstar report. Additionally, the recent gains in energy stocks, as noted in multiple sector updates, suggest a growing investor confidence in the sector&#x27;s resilience amidst broader market fluctuations, positioning companies like APA and Woodside Energy for further upside potential. This bullish sentiment is further supported by the identification of top oil and gas stocks to buy, indicating a favorable outlook for the industry moving forward.</p><p><strong>Bear:</strong> While rising oil prices may temporarily boost fair value estimates and investor sentiment in the Oil &amp; Gas Integrated sector, this optimism overlooks several critical headwinds. Increasing geopolitical tensions, potential regulatory changes aimed at reducing carbon emissions, and the ongoing shift towards renewable energy sources could undermine long-term demand for fossil fuels. Additionally, the recent gains in energy stocks may be more reflective of short-term market fluctuations rather than a sustainable recovery, as broader economic uncertainties continue to loom over the sector.</p><p><strong>Verdict:</strong> The Oil &amp; Gas Integrated sector is experiencing a rise in relative strength primarily due to increasing fair value estimates fueled by higher oil prices and growing investor confidence, as highlighted by recent sector updates. However, key risks remain, including geopolitical tensions and regulatory pressures aimed at reducing carbon emissions, which could undermine long-term demand for fossil fuels and challenge the sustainability of this bullish trend. Investors should closely monitor these developments while considering positions in leading companies like APA and Woodside Energy.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>Oil &amp; Gas E&amp;P</h4><p><strong>Bull:</strong> The Oil &amp; Gas Exploration and Production (E&amp;P) sector, as represented by the XOP ETF, is experiencing rising relative strength primarily due to the recent surge in oil prices, which have topped $100 for the first time since May, indicating strong demand and tight supply conditions in the market. Additionally, the performance of key players like Antero Resources and Magnolia Oil &amp; Gas, coupled with a favorable outlook for energy stocks highlighted by Morningstar, suggests robust fundamentals supporting the sector&#x27;s growth amid increasing investor interest. This momentum is further buoyed by the reopening of critical trade routes, which could enhance supply chain efficiencies and market accessibility for E&amp;P companies.</p><p><strong>Bear:</strong> While the recent surge in oil prices may seem promising, it is crucial to consider the potential volatility and geopolitical risks that could quickly reverse these gains, particularly with the reopening of critical straits that could lead to increased supply and dampen prices. Additionally, the XOP ETF&#x27;s relatively concentrated holdings raise concerns about its resilience; if a few key players falter, the entire ETF could suffer disproportionately. Furthermore, the broader economic environment, including potential recessions and shifts towards renewable energy, poses significant headwinds that could undermine the long-term viability of the E&amp;P sector.</p><p><strong>Verdict:</strong> The Oil &amp; Gas E&amp;P sector is experiencing upward momentum primarily due to rising oil prices driven by strong demand and constrained supply, alongside positive performance from major companies in the space. However, investors should remain cautious of potential volatility stemming from geopolitical risks and the possibility of increased supply from reopened trade routes, which could undermine price stability and the sector&#x27;s growth prospects.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>Steel</h4><p><strong>Bull:</strong> The rising relative strength of the steel industry, as evidenced by the VanEck Steel ETF (SLX) hitting new 52-week highs, is primarily driven by increased demand spurred by advancements in artificial intelligence and infrastructure investments, as highlighted in the recent headlines. Additionally, supportive regulatory developments, such as favorable policies from Washington for steelmakers, are likely enhancing profitability and market sentiment, positioning steel stocks for robust growth in the coming years.</p><p><strong>Bear:</strong> While the rising relative strength of the steel industry and the recent 52-week highs in the VanEck Steel ETF (SLX) may seem promising, these gains could be overstated due to speculative enthusiasm rather than sustainable demand. The steel sector is facing significant headwinds, including potential overcapacity, rising raw material costs, and the looming threat of economic slowdowns that could dampen infrastructure spending and AI-related demand. Furthermore, regulatory support may not be sufficient to offset these challenges, leading to a potential correction in stock valuations as market realities set in.</p><p><strong>Verdict:</strong> The steel industry&#x27;s recent rise, as reflected in the VanEck Steel ETF (SLX) reaching new highs, is fundamentally driven by increased demand from infrastructure investments and advancements in artificial intelligence, bolstered by supportive regulatory policies. However, investors should remain cautious of the key risk posed by potential overcapacity and rising raw material costs, which could undermine profitability and lead to a market correction if economic conditions shift.</p><p><em>Sources: Yahoo Finance, Google News</em></p></div></p>
+<h3 id="top-declining-industries">Top Declining Industries</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Direction</th>
+<th>Industry</th>
+<th>ETF</th>
+<th>Prior Rank</th>
+<th>Current Rank</th>
+<th>Days</th>
+<th>Rank Change</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Fell</td>
+<td>REIT - Healthcare Facilities</td>
+<td>XLRE</td>
+<td>7</td>
+<td>76</td>
+<td>28</td>
+<td class="negative">-69</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>Healthcare Plans</td>
+<td>IHF</td>
+<td>1</td>
+<td>68</td>
+<td>42</td>
+<td class="negative">-67</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>REIT - Retail</td>
+<td>N/A</td>
+<td>9</td>
+<td>75</td>
+<td>28</td>
+<td class="negative">-66</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>Beverages - Non-Alcoholic</td>
+<td>XLP</td>
+<td>13</td>
+<td>77</td>
+<td>42</td>
+<td class="negative">-64</td>
+</tr>
+<tr>
+<td>Fell</td>
+<td>REIT - Office</td>
+<td>XLRE</td>
+<td>6</td>
+<td>65</td>
+<td>28</td>
+<td class="negative">-59</td>
+</tr>
+</tbody>
+</table></div>
+<p><button class="open-panel-btn" onclick="openPanel('panel-declining')">Why are these industries falling? &#8594;</button><div id="panel-declining" class="side-panel"><div class="side-panel-header"><h3>Why are these industries falling?</h3><button class="side-panel-close" onclick="closeAllPanels()">&#x2715; Close panel</button></div><h4>REIT - Healthcare Facilities</h4><p><strong>Bear:</strong> While the bull analyst attributes the relative weakness in Healthcare Facilities REITs to broader market pressures, it is essential to recognize that the sector faces specific challenges that may undermine its stability and growth prospects. Rising interest rates, even in a &quot;no hike&quot; scenario, can still exert upward pressure on borrowing costs, impacting property valuations and reducing profitability. Furthermore, ongoing concerns about healthcare reimbursement rates, regulatory changes, and increasing operational costs could exacerbate the sector&#x27;s vulnerabilities, making it less attractive to investors despite any perceived stability.</p><p><strong>Bull:</strong> The relative weakness of the Healthcare Facilities REIT sector appears to be driven by broader market pressures, particularly from the financial sector, as indicated by multiple headlines highlighting declines in financial stocks. This sector-wide selling may be creating a risk-off environment, leading investors to shy away from REITs, including healthcare facilities, despite their potential stability and growth prospects. Additionally, the focus on &quot;no hike&quot; scenarios suggests that while interest rates may remain stable, the overall market sentiment is cautious, impacting the relative strength of healthcare REITs.</p><p><strong>Verdict:</strong> The recent decline in Healthcare Facilities REITs is primarily driven by a combination of broader market pressures and specific sector challenges, including rising interest rates and concerns over healthcare reimbursement rates. Investors should be cautious, as the upward pressure on borrowing costs and potential regulatory changes could significantly impact profitability and property valuations, making the sector less appealing despite its perceived stability. It is advisable to closely monitor interest rate trends and regulatory developments before making investment decisions in this space.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>Healthcare Plans</h4><p><strong>Bear:</strong> While the bull analyst attributes the relative weakness in the Healthcare Plans sector to profit-taking and short-term volatility, a more concerning factor is the potential long-term impact of healthcare policy changes and regulatory scrutiny that could pressure margins and profitability. Additionally, the mixed sentiment surrounding major players like Humana and UnitedHealth suggests that investor confidence is waning, which could indicate deeper structural issues within the sector rather than just temporary fluctuations. This environment raises significant concerns about the sustainability of growth in healthcare stocks, making a bearish outlook more plausible.</p><p><strong>Bull:</strong> The relative weakness in the Healthcare Plans sector, as indicated by the falling trend against other industries, can be attributed to recent profit-taking after UnitedHealth&#x27;s pullback from its 52-week high, as highlighted in the headlines. Additionally, the mixed sentiment surrounding stock outlooks for major players like Humana and UnitedHealth, coupled with broader market concerns about healthcare policy changes and Medicare updates, may be contributing to investor caution and volatility in the sector. This environment creates uncertainty, leading to a temporary decline in relative strength despite the long-term bullish outlook for healthcare stocks.</p><p><strong>Verdict:</strong> The recent decline in the Healthcare Plans sector appears to be driven by a combination of profit-taking following UnitedHealth&#x27;s peak and heightened investor caution due to uncertainty surrounding healthcare policy changes and regulatory scrutiny. The key risk highlighted by the bear case is the potential for these policy shifts to pressure margins and profitability, suggesting that investors should closely monitor legislative developments and market sentiment to assess the sustainability of growth in this sector.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>REIT - Retail</h4><p><strong>Bear:</strong> While the bull analyst suggests that the relative weakness in the REIT - Retail sector is a temporary market trend, it overlooks the fundamental challenges facing retail real estate, such as the ongoing shift towards e-commerce, rising interest rates, and increasing operational costs. Additionally, the shrinking Canadian REIT sector signals deeper structural issues that could lead to further declines in property values and tenant demand, undermining the supposed attractiveness of high-yield opportunities like Supermarket Income REIT. Investors should be cautious, as these headwinds may outweigh any short-term prospects for recovery in the retail real estate market.</p><p><strong>Bull:</strong> The relative weakness in the REIT - Retail sector can be attributed to broader market trends favoring other real estate sectors, as highlighted by Morningstar&#x27;s focus on outperforming real estate investments. Additionally, the headlines indicate a growing concern over the shrinking Canadian REIT sector, which may reflect broader economic pressures affecting retail real estate, leading investors to seek opportunities in more resilient sectors. However, the mention of high-yield opportunities, such as Supermarket Income REIT, suggests that while the sector faces challenges, there are still attractive investment prospects for those willing to look beyond the current market sentiment.</p><p><strong>Verdict:</strong> The retail REIT sector is experiencing a decline primarily due to the persistent shift towards e-commerce, rising interest rates, and increasing operational costs, which are straining traditional brick-and-mortar retail. While there may be high-yield opportunities like Supermarket Income REIT, investors should remain cautious of the underlying structural challenges that could further depress property values and tenant demand, potentially outweighing short-term recovery prospects. It is advisable to closely monitor these economic indicators and consider diversifying into more resilient sectors.</p><p><em>Sources: Google News</em></p><hr><h4>Beverages - Non-Alcoholic</h4><p><strong>Bear:</strong> While the bull analyst attributes the sector&#x27;s decline to broader market concerns and mixed consumer sentiment, it&#x27;s crucial to recognize that the non-alcoholic beverage sector faces fundamental challenges that extend beyond market volatility. The rising popularity of health-conscious alternatives and changing consumer preferences toward alcoholic beverages, as highlighted in recent headlines, could signify a long-term shift away from traditional non-alcoholic products. Additionally, with inflationary pressures impacting disposable income, consumers may prioritize spending on essential goods over non-alcoholic beverages, further straining the sector&#x27;s growth prospects.</p><p><strong>Bull:</strong> The recent decline in the relative strength of the Beverages - Non-Alcoholic sector can be attributed to broader market concerns reflected in the headlines, particularly the mixed performance of consumer stocks amid changing investor sentiment and lower rate hike expectations. As consumer stocks experience volatility, it may lead to a cautious outlook on discretionary spending, impacting the non-alcoholic beverage sector, despite strong profitability rankings for major players like Coca-Cola and PepsiCo. Additionally, the focus on alcohol stocks in the media suggests a shift in consumer preferences, which could further pressure non-alcoholic beverage sales.</p><p><strong>Verdict:</strong> The non-alcoholic beverage sector&#x27;s decline is primarily driven by a fundamental shift in consumer preferences towards health-conscious alternatives and alcoholic beverages, compounded by inflationary pressures that are leading consumers to prioritize essential goods over discretionary spending. The key risk highlighted by the bear case is the potential for these changing preferences to result in a sustained downturn for traditional non-alcoholic products, necessitating a strategic pivot for companies in the sector to adapt to evolving consumer demands.</p><p><em>Sources: Yahoo Finance, Google News</em></p><hr><h4>REIT - Office</h4><p><strong>Bear:</strong> While the bull analyst points to potential recovery opportunities in undervalued office REITs, the persistent decline in financial stocks raises significant concerns about the overall economic environment, which could lead to reduced demand for office space as companies reassess their real estate needs amid rising remote work trends. Additionally, the &quot;no hike&quot; scenario may not be as beneficial as suggested, as prolonged low interest rates could indicate a struggling economy, further exacerbating occupancy challenges and rental income pressures for office REITs. Thus, the fundamental outlook for the sector remains bleak, overshadowed by structural shifts in work habits and economic uncertainty.</p><p><strong>Bull:</strong> The relative weakness in the Office REIT sector can be attributed to broader economic concerns, particularly in the financial sector, as indicated by the repeated headlines about declining financial stocks. This decline may signal investor apprehension about potential interest rate hikes or economic slowdowns, which can negatively impact office occupancy rates and rental income. However, the recent articles highlighting the potential for undervalued office REITs and their resilience in a &quot;no hike&quot; scenario suggest that there may be significant opportunities for recovery and growth in this sector moving forward.</p><p><strong>Verdict:</strong> The office REIT sector is experiencing a decline primarily due to economic uncertainty, particularly stemming from weakness in the financial sector and shifting work habits toward remote arrangements. The key risk highlighted by the bear case is that prolonged low interest rates may signal a struggling economy, potentially leading to decreased demand for office space and further pressures on occupancy rates and rental income. Investors should approach opportunities in undervalued office REITs with caution, closely monitoring economic indicators and trends in remote work to assess the viability of recovery.</p><p><em>Sources: Yahoo Finance, Google News</em></p></div></p>
+<h2 id="leading-industries">Leading Industries</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Rank</th>
+<th>ETF</th>
+<th>7d</th>
+<th>14d</th>
+<th>28d</th>
+<th>42d</th>
+<th>Chg 42d</th>
+<th>Size</th>
+<th>20D</th>
+<th>60D</th>
+<th>Composite</th>
+<th>Active Setups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>1</td>
+<td>5</td>
+<td>3</td>
+<td>4</td>
+<td class="positive">+3</td>
+<td>16</td>
+<td>12.5%</td>
+<td>49.5%</td>
+<td>0.951</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>2</td>
+<td>38</td>
+<td>8</td>
+<td>6</td>
+<td class="positive">+4</td>
+<td>12</td>
+<td>13.3%</td>
+<td>43.8%</td>
+<td>0.916</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>XLK</td>
+<td>15</td>
+<td>48</td>
+<td>53</td>
+<td>37</td>
+<td class="positive">+34</td>
+<td>15</td>
+<td>34.9%</td>
+<td>33.3%</td>
+<td>0.889</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>CRAK</td>
+<td>5</td>
+<td>1</td>
+<td>1</td>
+<td>30</td>
+<td class="positive">+26</td>
+<td>7</td>
+<td>7.6%</td>
+<td>29.8%</td>
+<td>0.874</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Software - Application</td>
+<td>5</td>
+<td>IGV</td>
+<td>4</td>
+<td>12</td>
+<td>21</td>
+<td>42</td>
+<td class="positive">+37</td>
+<td>74</td>
+<td>11.6%</td>
+<td>21.6%</td>
+<td>0.835</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Medical Devices</td>
+<td>6</td>
+<td>N/A</td>
+<td>8</td>
+<td>9</td>
+<td>40</td>
+<td>27</td>
+<td class="positive">+21</td>
+<td>20</td>
+<td>10.9%</td>
+<td>17.8%</td>
+<td>0.830</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Insurance Brokers</td>
+<td>7</td>
+<td>N/A</td>
+<td>28</td>
+<td>11</td>
+<td>14</td>
+<td>20</td>
+<td class="positive">+13</td>
+<td>6</td>
+<td>8.9%</td>
+<td>22.4%</td>
+<td>0.825</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Banks - Diversified</td>
+<td>8</td>
+<td>N/A</td>
+<td>12</td>
+<td>8</td>
+<td>17</td>
+<td>10</td>
+<td class="positive">+2</td>
+<td>16</td>
+<td>6.3%</td>
+<td>17.5%</td>
+<td>0.824</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Biotechnology</td>
+<td>9</td>
+<td>XBI</td>
+<td>13</td>
+<td>50</td>
+<td>15</td>
+<td>3</td>
+<td class="negative">-6</td>
+<td>91</td>
+<td>8.3%</td>
+<td>26.4%</td>
+<td>0.814</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Medical Care Facilities</td>
+<td>10</td>
+<td>IHF</td>
+<td>9</td>
+<td>16</td>
+<td>5</td>
+<td>7</td>
+<td class="negative">-3</td>
+<td>9</td>
+<td>7.9%</td>
+<td>25.3%</td>
+<td>0.811</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Rank columns (7d–42d) show the industry's rank that many trading days ago — lower is stronger. Chg 42d = rank change vs 42 trading days ago — positive means the industry moved up. 20D and 60D are the mean stock return within the industry over that period. Active Setups: count of today's swing-trade candidates from this industry appearing across all signal screens.</em></p>
+<div class='leading-keywords'><strong>Diagnostics &amp; Research</strong> — genomics growth · healthcare innovation · cancer diagnostics · AI integration · investment potential<br><strong>Health Information Services</strong> — growth potential · industry spinoffs · strong performance · investment opportunities · healthcare innovation<br><strong>Computer Hardware</strong> — tech stocks rally · sector-wide momentum · bullish sentiment · quantum computing · AI investments<br><strong>Oil &amp; Gas Refining &amp; Marketing</strong> — strong performance · market optimism · high EPS growth · ETF momentum · industry strength<br><strong>Software - Application</strong> — top picks · tech stocks · inflation data · demand-side ad tech · structural risk<br><strong>Medical Devices</strong> — innovation surge · strong growth · favorable valuations · market leadership · investment opportunities<br><strong>Insurance Brokers</strong> — thriving industry · strong earnings · investment potential · market resilience · growth opportunities<br><strong>Banks - Diversified</strong> — strong earnings · sector diversification · investment opportunities · market momentum · ETF advantages<br><strong>Biotechnology</strong> — megadeals · industry recovery · investment potential · biotech comeback · healthcare innovation<br><strong>Medical Care Facilities</strong> — ETF winners · healthcare growth · stock outlook · analyst predictions · investment opportunities</div>
+
+<h2 id="deteriorating-industries">Deteriorating Industries</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Industry</th>
+<th>Rank</th>
+<th>ETF</th>
+<th>7d</th>
+<th>14d</th>
+<th>28d</th>
+<th>42d</th>
+<th>Chg 42d</th>
+<th>Size</th>
+<th>20D</th>
+<th>60D</th>
+<th>Composite</th>
+<th>Active Setups</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Solar</td>
+<td>88</td>
+<td>TAN</td>
+<td>87</td>
+<td>82</td>
+<td>78</td>
+<td>61</td>
+<td class="negative">-27</td>
+<td>8</td>
+<td class="negative">-10.5%</td>
+<td class="negative">-24.6%</td>
+<td>0.049</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Footwear &amp; Accessories</td>
+<td>87</td>
+<td>N/A</td>
+<td>67</td>
+<td>57</td>
+<td>47</td>
+<td>40</td>
+<td class="negative">-47</td>
+<td>5</td>
+<td class="negative">-11.8%</td>
+<td>1.3%</td>
+<td>0.132</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Chemicals</td>
+<td>86</td>
+<td>N/A</td>
+<td>88</td>
+<td>84</td>
+<td>81</td>
+<td>86</td>
+<td>0</td>
+<td>8</td>
+<td class="negative">-5.2%</td>
+<td class="negative">-23.5%</td>
+<td>0.158</td>
+<td>1</td>
+</tr>
+<tr>
+<td>REIT - Diversified</td>
+<td>85</td>
+<td>N/A</td>
+<td>80</td>
+<td>64</td>
+<td>33</td>
+<td>62</td>
+<td class="negative">-23</td>
+<td>5</td>
+<td class="negative">-7.1%</td>
+<td class="negative">-5.2%</td>
+<td>0.161</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Agricultural Inputs</td>
+<td>84</td>
+<td>N/A</td>
+<td>71</td>
+<td>70</td>
+<td>45</td>
+<td>81</td>
+<td class="negative">-3</td>
+<td>5</td>
+<td class="negative">-5.8%</td>
+<td class="negative">-6.1%</td>
+<td>0.182</td>
+<td>1</td>
+</tr>
+<tr>
+<td>Utilities - Independent Power Producers</td>
+<td>83</td>
+<td>XLU</td>
+<td>86</td>
+<td>80</td>
+<td>79</td>
+<td>75</td>
+<td class="negative">-8</td>
+<td>5</td>
+<td class="negative">-1.1%</td>
+<td class="negative">-8.0%</td>
+<td>0.197</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Integrated Freight &amp; Logistics</td>
+<td>82</td>
+<td>N/A</td>
+<td>79</td>
+<td>58</td>
+<td>27</td>
+<td>38</td>
+<td class="negative">-44</td>
+<td>7</td>
+<td class="negative">-9.3%</td>
+<td class="negative">-1.6%</td>
+<td>0.220</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Auto Manufacturers</td>
+<td>81</td>
+<td>N/A</td>
+<td>66</td>
+<td>61</td>
+<td>69</td>
+<td>69</td>
+<td class="negative">-12</td>
+<td>10</td>
+<td class="negative">-3.1%</td>
+<td class="negative">-5.2%</td>
+<td>0.260</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Utilities - Regulated Electric</td>
+<td>80</td>
+<td>XLU</td>
+<td>82</td>
+<td>65</td>
+<td>38</td>
+<td>44</td>
+<td class="negative">-36</td>
+<td>29</td>
+<td class="negative">-2.4%</td>
+<td class="negative">-0.6%</td>
+<td>0.279</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Gambling</td>
+<td>79</td>
+<td>N/A</td>
+<td>83</td>
+<td>72</td>
+<td>22</td>
+<td>28</td>
+<td class="negative">-51</td>
+<td>5</td>
+<td class="negative">-8.1%</td>
+<td class="negative">-0.3%</td>
+<td>0.286</td>
+<td>0</td>
+</tr>
+</tbody>
+</table></div>
+<p><em>Rank columns (7d–42d) show the industry's rank that many trading days ago — lower is stronger. Chg 42d = rank change vs 42 trading days ago — positive means the industry moved up. 20D and 60D are the mean stock return within the industry over that period. Active Setups: count of today's swing-trade candidates from this industry appearing across all signal screens.</em></p>
+<h2 id="long-term-research-candidates">Long-Term Research Candidates</h2>
+<p>These are research candidates from top-ranked stocks, capped at five names per industry to avoid over-concentration. Returns shown (60D, 120D, 250D) are historical — they reflect where prices have already moved, not forward expectations. Extension Risk flags names that may require extra patience or a better entry point. They are not buy signals.</p>
+<p><em>Chart: <strong>TV</strong> = TradingView chart (opens in browser); <strong>PDF</strong> = local chart file (if downloaded).</em></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Name</th>
+<th>Industry</th>
+<th>Industry Rank</th>
+<th>Market Cap</th>
+<th>60D Hist</th>
+<th>120D Hist</th>
+<th>250D Hist</th>
+<th>Extension Risk</th>
+<th>Research Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TWST</td>
+<td>Twist Bioscience</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>151.3%</td>
+<td>158.7%</td>
+<td>342.4%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TWST">TV</a></td>
+</tr>
+<tr>
+<td>WGS</td>
+<td>GeneDx Holdings</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>73.0%</td>
+<td class="negative">-4.1%</td>
+<td class="negative">-38.5%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=WGS">TV</a></td>
+</tr>
+<tr>
+<td>NTRA</td>
+<td>Natera</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>60.3%</td>
+<td>50.1%</td>
+<td>92.7%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=NTRA">TV</a></td>
+</tr>
+<tr>
+<td>IQV</td>
+<td>IQVIA Holdings</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>40.7%</td>
+<td>46.3%</td>
+<td>25.3%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=IQV">TV</a></td>
+</tr>
+<tr>
+<td>A</td>
+<td>Agilent Technologies</td>
+<td>Diagnostics &amp; Research</td>
+<td>1</td>
+<td>N/A</td>
+<td>30.7%</td>
+<td>19.8%</td>
+<td>26.7%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=A">TV</a></td>
+</tr>
+<tr>
+<td>TXG</td>
+<td>10x Genomics</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>141.8%</td>
+<td>203.6%</td>
+<td>330.8%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=TXG">TV</a></td>
+</tr>
+<tr>
+<td>HTFL</td>
+<td>Heartflow</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>53.2%</td>
+<td>84.2%</td>
+<td>39.9%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=HTFL">TV</a></td>
+</tr>
+<tr>
+<td>GDRX</td>
+<td>GoodRx</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>47.6%</td>
+<td>57.0%</td>
+<td class="negative">-27.3%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=GDRX">TV</a></td>
+</tr>
+<tr>
+<td>VEEV</td>
+<td>Veeva Systems</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>44.5%</td>
+<td>35.6%</td>
+<td class="negative">-15.5%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VEEV">TV</a></td>
+</tr>
+<tr>
+<td>SDGR</td>
+<td>Schrodinger</td>
+<td>Health Information Services</td>
+<td>2</td>
+<td>N/A</td>
+<td>41.2%</td>
+<td>54.0%</td>
+<td class="negative">-13.2%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=SDGR">TV</a></td>
+</tr>
+<tr>
+<td>UMAC</td>
+<td>Unusual Machines</td>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>N/A</td>
+<td>109.8%</td>
+<td>126.5%</td>
+<td>200.0%</td>
+<td>Very extended</td>
+<td>Top-ranked in industry; very extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=UMAC">TV</a></td>
+</tr>
+<tr>
+<td>P</td>
+<td>Everpure</td>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>N/A</td>
+<td>50.1%</td>
+<td>72.8%</td>
+<td>100.1%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=P">TV</a></td>
+</tr>
+<tr>
+<td>SMCI</td>
+<td>Super Micro Computer</td>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>N/A</td>
+<td>14.4%</td>
+<td>23.0%</td>
+<td class="negative">-16.5%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=SMCI">TV</a></td>
+</tr>
+<tr>
+<td>IONQ</td>
+<td>IonQ Inc</td>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>N/A</td>
+<td class="negative">-10.7%</td>
+<td>48.1%</td>
+<td>16.4%</td>
+<td>Lagging</td>
+<td>Top-ranked in industry; lagging</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=IONQ">TV</a></td>
+</tr>
+<tr>
+<td>VELO</td>
+<td>Velo3D</td>
+<td>Computer Hardware</td>
+<td>3</td>
+<td>N/A</td>
+<td class="negative">-15.7%</td>
+<td>61.1%</td>
+<td>164.3%</td>
+<td>Lagging</td>
+<td>Top-ranked in industry; lagging</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VELO">TV</a></td>
+</tr>
+<tr>
+<td>PBF</td>
+<td>PBF Energy</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>N/A</td>
+<td>80.5%</td>
+<td>117.9%</td>
+<td>224.7%</td>
+<td>Extended</td>
+<td>Top-ranked in industry; extended</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PBF">TV</a></td>
+</tr>
+<tr>
+<td>MPC</td>
+<td>Marathon Petroleum</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>N/A</td>
+<td>38.6%</td>
+<td>84.1%</td>
+<td>124.5%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=MPC">TV</a></td>
+</tr>
+<tr>
+<td>VLO</td>
+<td>Valero Energy</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>N/A</td>
+<td>38.0%</td>
+<td>75.7%</td>
+<td>159.2%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=VLO">TV</a></td>
+</tr>
+<tr>
+<td>DINO</td>
+<td>HF Sinclair</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>N/A</td>
+<td>34.4%</td>
+<td>95.8%</td>
+<td>122.1%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=DINO">TV</a></td>
+</tr>
+<tr>
+<td>PSX</td>
+<td>Phillips 66</td>
+<td>Oil &amp; Gas Refining &amp; Marketing</td>
+<td>4</td>
+<td>N/A</td>
+<td>31.9%</td>
+<td>56.5%</td>
+<td>101.3%</td>
+<td>Constructive</td>
+<td>Top-ranked in industry</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PSX">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="technical-screen-matches">Technical Screen Matches</h2>
+<p>These are technical screen matches from existing signal files. They are not trade recommendations. Trigger, stop, ATR, liquidity, reward/risk, and event risk still require separate validation until those inputs are available.</p>
+<p>Model Screen Score is weighted by signal count, industry rank, freshness, and setup type. It is not a probability of profit, expected return, or suitability rating. Industry cap: max 3 candidates per industry.</p>
+<p><em>Signal glossary: <strong>Momentum Pullback</strong> = stock in an uptrend that has pulled back 10–30% and shows re-entry conditions. <strong>MA Compression</strong> = short- and long-term moving averages converging, often preceding a directional move. <strong>Three-Day Up/Down</strong> = three consecutive closes in the same direction. <strong>New 52Wk High/Low</strong> = price reached a new annual extreme.</em></p>
+<p><em>Chart: <strong>TV</strong> = TradingView chart (opens in browser); <strong>PDF</strong> = local chart file (if downloaded).</em></p>
+<h3 id="bullish-technical-screen-matches">Bullish Technical Screen Matches</h3>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Industry</th>
+<th>Setups</th>
+<th>Close</th>
+<th>Industry Rank</th>
+<th>Signal Count</th>
+<th>Model Screen Score</th>
+<th>Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLS</td>
+<td>Biotechnology</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>13.00</td>
+<td>9</td>
+<td>2</td>
+<td>85</td>
+<td>Multi-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=SLS">TV</a></td>
+</tr>
+<tr>
+<td>IVZ</td>
+<td>Asset Management</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>32.57</td>
+<td>13</td>
+<td>2</td>
+<td>85</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=IVZ">TV</a></td>
+</tr>
+<tr>
+<td>CVE</td>
+<td>Oil &amp; Gas Integrated</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>32.13</td>
+<td>14</td>
+<td>2</td>
+<td>85</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CVE">TV</a></td>
+</tr>
+<tr>
+<td>EQNR</td>
+<td>Oil &amp; Gas Integrated</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>41.82</td>
+<td>14</td>
+<td>2</td>
+<td>85</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=EQNR">TV</a></td>
+</tr>
+<tr>
+<td>ABUS</td>
+<td>Biotechnology</td>
+<td>MA Compression; Three-Day Up</td>
+<td>4.71</td>
+<td>9</td>
+<td>2</td>
+<td>80</td>
+<td>Multi-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ABUS">TV</a></td>
+</tr>
+<tr>
+<td>CGAU</td>
+<td>Gold</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>21.92</td>
+<td>18</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CGAU">TV</a></td>
+</tr>
+<tr>
+<td>COHU</td>
+<td>Semiconductor Equipment &amp; Materials</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>62.62</td>
+<td>19</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=COHU">TV</a></td>
+</tr>
+<tr>
+<td>BTE</td>
+<td>Oil &amp; Gas E&amp;P</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>4.55</td>
+<td>21</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=BTE">TV</a></td>
+</tr>
+<tr>
+<td>OVV</td>
+<td>Oil &amp; Gas E&amp;P</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>63.85</td>
+<td>21</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=OVV">TV</a></td>
+</tr>
+<tr>
+<td>OXY</td>
+<td>Oil &amp; Gas E&amp;P</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>59.04</td>
+<td>21</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=OXY">TV</a></td>
+</tr>
+<tr>
+<td>ROKU</td>
+<td>Entertainment</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>158.31</td>
+<td>22</td>
+<td>2</td>
+<td>77</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ROKU">TV</a></td>
+</tr>
+<tr>
+<td>MRK</td>
+<td>Drug Manufacturers - General</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>135.97</td>
+<td>27</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=MRK">TV</a></td>
+</tr>
+<tr>
+<td>DAR</td>
+<td>Packaged Foods</td>
+<td>New 52Wk High; Three-Day Up</td>
+<td>67.67</td>
+<td>29</td>
+<td>2</td>
+<td>70</td>
+<td>Multi-signal; new-high strength</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=DAR">TV</a></td>
+</tr>
+<tr>
+<td>MU</td>
+<td>Semiconductors</td>
+<td>Momentum Pullback; Three-Day Up</td>
+<td>1011.75</td>
+<td>44</td>
+<td>2</td>
+<td>65</td>
+<td>Multi-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=MU">TV</a></td>
+</tr>
+<tr>
+<td>PSNL</td>
+<td>Diagnostics &amp; Research</td>
+<td>Momentum Pullback</td>
+<td>13.89</td>
+<td>1</td>
+<td>1</td>
+<td>65</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=PSNL">TV</a></td>
+</tr>
+<tr>
+<td>CRSR</td>
+<td>Computer Hardware</td>
+<td>Momentum Pullback</td>
+<td>12.24</td>
+<td>3</td>
+<td>1</td>
+<td>65</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=CRSR">TV</a></td>
+</tr>
+<tr>
+<td>APPS</td>
+<td>Software - Application</td>
+<td>Momentum Pullback</td>
+<td>12.24</td>
+<td>5</td>
+<td>1</td>
+<td>58</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=APPS">TV</a></td>
+</tr>
+<tr>
+<td>FSLY</td>
+<td>Software - Application</td>
+<td>Momentum Pullback</td>
+<td>29.04</td>
+<td>5</td>
+<td>1</td>
+<td>58</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=FSLY">TV</a></td>
+</tr>
+<tr>
+<td>GRND</td>
+<td>Software - Application</td>
+<td>Momentum Pullback</td>
+<td>15.81</td>
+<td>5</td>
+<td>1</td>
+<td>58</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=GRND">TV</a></td>
+</tr>
+<tr>
+<td>NVCR</td>
+<td>Medical Devices</td>
+<td>Momentum Pullback</td>
+<td>17.53</td>
+<td>6</td>
+<td>1</td>
+<td>58</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=NVCR">TV</a></td>
+</tr>
+<tr>
+<td>SNDK</td>
+<td>Computer Hardware</td>
+<td>Three-Day Up</td>
+<td>1786.85</td>
+<td>3</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=SNDK">TV</a></td>
+</tr>
+<tr>
+<td>STX</td>
+<td>Computer Hardware</td>
+<td>Three-Day Up</td>
+<td>994.79</td>
+<td>3</td>
+<td>1</td>
+<td>55</td>
+<td>Single-signal; top industry setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=STX">TV</a></td>
+</tr>
+<tr>
+<td>ABSI</td>
+<td>Biotechnology</td>
+<td>Momentum Pullback</td>
+<td>9.24</td>
+<td>9</td>
+<td>1</td>
+<td>50</td>
+<td>Single-signal; top industry pullback</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ABSI">TV</a></td>
+</tr>
+<tr>
+<td>AKAM</td>
+<td>Software - Infrastructure</td>
+<td>Momentum Pullback</td>
+<td>122.97</td>
+<td>11</td>
+<td>1</td>
+<td>50</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=AKAM">TV</a></td>
+</tr>
+<tr>
+<td>BXSL</td>
+<td>Asset Management</td>
+<td>MA Compression</td>
+<td>24.21</td>
+<td>13</td>
+<td>1</td>
+<td>45</td>
+<td>Single-signal; compression setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=BXSL">TV</a></td>
+</tr>
+<tr>
+<td>OBDC</td>
+<td>Asset Management</td>
+<td>MA Compression</td>
+<td>11.50</td>
+<td>13</td>
+<td>1</td>
+<td>45</td>
+<td>Single-signal; compression setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=OBDC">TV</a></td>
+</tr>
+<tr>
+<td>LPTH</td>
+<td>Electronic Components</td>
+<td>Momentum Pullback</td>
+<td>14.80</td>
+<td>17</td>
+<td>1</td>
+<td>42</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=LPTH">TV</a></td>
+</tr>
+<tr>
+<td>ENTG</td>
+<td>Semiconductor Equipment &amp; Materials</td>
+<td>Momentum Pullback</td>
+<td>163.09</td>
+<td>19</td>
+<td>1</td>
+<td>42</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=ENTG">TV</a></td>
+</tr>
+<tr>
+<td>LRCX</td>
+<td>Semiconductor Equipment &amp; Materials</td>
+<td>Momentum Pullback</td>
+<td>343.84</td>
+<td>19</td>
+<td>1</td>
+<td>42</td>
+<td>Single-signal; pullback setup</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=LRCX">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="bearish-technical-screen-matches">Bearish Technical Screen Matches</h3>
+<p><em>Bearish setups — stocks making new lows or showing persistent downside patterns. Validate carefully before acting.</em></p>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Ticker</th>
+<th>Industry</th>
+<th>Setups</th>
+<th>Close</th>
+<th>Industry Rank</th>
+<th>Signal Count</th>
+<th>Model Screen Score</th>
+<th>Reason</th>
+<th>Chart</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>STNE</td>
+<td>Software - Infrastructure</td>
+<td>New 52Wk Low; Three-Day Down</td>
+<td>9.27</td>
+<td>11</td>
+<td>2</td>
+<td>55</td>
+<td>Multi-signal; new-low weakness</td>
+<td><a href="https://www.tradingview.com/chart/?symbol=STNE">TV</a></td>
+</tr>
+</tbody>
+</table></div>
+<details>
+<summary><strong>How To Use This Report / What This Report Is Not</strong></summary>
+
+<p><strong>How To Use This Report</strong></p>
+<div class="table-scroll"><table><thead><tr><th>Use</th><th>Purpose</th></tr></thead><tbody><tr><td>Market map</td><td>Start with breadth, regime, risk warnings, and what changed since the prior report.</td></tr><tr><td>Industry scan</td><td>Use leading, deteriorating, rising, and declining industries to focus research.</td></tr><tr><td>Research queue</td><td>Treat long-term candidates as names for deeper fundamental, valuation, and chart review.</td></tr><tr><td>Technical review</td><td>Treat bullish and bearish screen matches as watchlist inputs that require independent trigger, stop, liquidity, and event-risk checks.</td></tr><tr><td>Source follow-up</td><td>Use chart links and source files to verify raw inputs before relying on any row.</td></tr></tbody></table></div>
+
+<p><strong>What This Report Is Not</strong></p>
+<div class="table-scroll"><table><thead><tr><th>Not</th><th>Meaning</th></tr></thead><tbody><tr><td>Investment advice</td><td>The report does not evaluate personal objectives, risk tolerance, tax situation, account type, or suitability.</td></tr><tr><td>Buy/sell recommendation</td><td>Named tickers are research candidates or screen matches, not recommendations to transact.</td></tr><tr><td>Price target</td><td>The report does not provide fair value estimates, targets, or expected returns.</td></tr><tr><td>Trade plan</td><td>Trigger, stop, sizing, reward/risk, liquidity, and event-risk review remain separate user work.</td></tr><tr><td>Performance claim</td><td>Model Screen Score is not validated historical performance or a forecast of future results.</td></tr></tbody></table></div>
+
+</details>
+
+<h2 id="methodology-and-score-notes">Methodology And Score Notes</h2>
+<div class="table-scroll"><table>
+<thead>
+<tr>
+<th>Item</th>
+<th>Note</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Version</td>
+<td>Daily Report Methodology v1</td>
+</tr>
+<tr>
+<td>Model Screen Score</td>
+<td>Screen-fit rank based on signal count, industry rank, freshness, and setup type.</td>
+</tr>
+<tr>
+<td>Not predictive proof</td>
+<td>The score is not expected return, probability of profit, historical validation, or suitability analysis.</td>
+</tr>
+<tr>
+<td>Industry ranks</td>
+<td>Composite industry ranks use existing daily ranking outputs and historical rank columns when available.</td>
+</tr>
+<tr>
+<td>Research candidates</td>
+<td>Long-term rows are research candidates from ranked stocks and leading industries, with historical returns labeled as historical only.</td>
+</tr>
+<tr>
+<td>Technical matches</td>
+<td>Bullish and bearish rows are screen matches requiring independent chart, trigger, stop, liquidity, and event-risk review.</td>
+</tr>
+</tbody>
+</table></div>
+<details>
+<summary><strong>Source Files</strong></summary>
+
+<div class="table-scroll"><table><thead><tr><th>Source</th><th>Status</th><th>Rows</th><th>Path</th></tr></thead><tbody><tr><td>Market breadth</td><td>present</td><td>1253</td><td>breadth_20260817.csv</td></tr><tr><td>Industry composite rankings</td><td>present</td><td>88</td><td>all_industry_composite_20260817.csv</td></tr><tr><td>Top ranked stocks</td><td>present</td><td>266</td><td>top_ranked_composite_20260817.csv</td></tr><tr><td>All ranked stocks</td><td>present</td><td>1332</td><td>all_stocks_composite_sorted_20260817.csv</td></tr><tr><td>Top momentum pullbacks</td><td>present</td><td>1482</td><td>top_momentum_pullbacks_20260817.csv</td></tr><tr><td>MA compression</td><td>present</td><td>1482</td><td>ma_compression_stocks_20260817.csv</td></tr><tr><td>Three-day up/down</td><td>present</td><td>137</td><td>three_day_up_down_stocks_20260817.csv</td></tr><tr><td>New 52-week members</td><td>present</td><td>51</td><td>breadth_new_52wk_members_20260817.csv</td></tr></tbody></table></div>
+
+</details>
+<div style="margin-top:48px;padding:20px 24px;background:#eff6ff;border:1px solid #bfdbfe;border-radius:8px;text-align:center;">
+  <strong style="color:#1e3a5f;">Get this market breadth and sector rotation report every trading day.</strong><br>
+  <span style="display:inline-block;margin-top:4px;color:#374151;font-size:14px;">Market regime, industry leadership, risk warnings, and technical screens delivered to your inbox.</span><br>
+  <a href="https://breadth-and-rotation.beehiiv.com/subscribe" style="display:inline-block;margin-top:8px;padding:8px 20px;background:#1d4ed8;color:#fff;text-decoration:none;font-size:14px;font-weight:600;border-radius:6px;">Subscribe free &rarr;</a>
+  <div style="margin-top:10px;color:#6b7280;font-size:12px;">Know someone who tracks market breadth or sector rotation? Forward this report to them.</div>
+</div>
+<hr style="margin-top:32px;border:none;border-top:1px solid #d9e2ec;">
+<p style="font-size:11px;color:#6b7280;margin:12px 0 24px;">This report is generated from automated technical screens and is for informational and research purposes only. It is not investment advice, a solicitation, or a recommendation to buy or sell any security. Past performance is not indicative of future results. You are solely responsible for your own investment decisions. Consult a licensed financial advisor before acting on any information herein.</p>
+<div id="panel-overlay" class="side-panel-overlay" onclick="closeAllPanels()"></div>
+<script>
+var _openId = null;
+function openPanel(id) {
+  if (_openId && _openId !== id) document.getElementById(_openId).classList.remove('open');
+  _openId = id;
+  document.getElementById(id).classList.add('open');
+  document.getElementById('panel-overlay').classList.add('open');
+}
+function closeAllPanels() {
+  if (_openId) document.getElementById(_openId).classList.remove('open');
+  _openId = null;
+  document.getElementById('panel-overlay').classList.remove('open');
+}
+document.addEventListener('keydown', function(e) { if (e.key === 'Escape') closeAllPanels(); });
+</script>
+</body>
+</html>
